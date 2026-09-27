@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+}
+/*Header*/
+.cabecera{
+    background-color: #3E3E41;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo{
+    width: 10%;
+    padding-left: 1vh;
+    
+}
+
+.buscador{
+    width: 10%;
+    height: 2vh;
+   margin-left: auto;
+   margin-right: 1vh ;
+   border-radius: 25px; 
+   border: 1px solid #ccc; 
+   padding: 0px;
+   
+}
+
+.buscador::placeholder{
+    font-size: 14px;
+}
+/*Header*/
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+    gap: 10%;
+}

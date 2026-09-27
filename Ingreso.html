@@ -3,15 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proyecto/css/styles.css">
     <title>Acceso</title>
 </head>
 <body>
-    <div>
+    <header class="header-ingreso">
+        <img src="proyecto/fotos/logo.png" alt="Logo de la página" class="logo">
+    </header>
+    <!-- Checkbox oculto que guardará el estado (marcado / no marcado) -->
+    <input type="radio" name="pantalla" id="radio-inicio-sesion" class="radio-state">
+    <input type="radio" name="pantalla" id="radio-crear-usuario" class="radio-state">
+
+    <!-- Caja de acceso inicial -->
+    <div class="cajaAcceso">
         <h2>!Bienvenido a Figuras Coleccionables!</h2>
-        <h3>Inicia sesión para continuar o crea una cuenta</h3>
-        <button type="button" onclick="window.location.href='login.html'">Iniciar sesión</button>
-        <button type="button" onclick="window.location.href='registro.html'">Crear cuenta</button>
-        
+        <p>Inicia sesión o crea una cuenta para continuar</p>
+        <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
+        <div class="divider">
+            <span>o</span>
+        </div>
+        <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
     </div>
+
+<!--caja de inicio de sesión-->
+<form action="main.html" method="get" class="cajaInicioSesion">
+  <h2>Iniciar Sesión</h2>
+  <div class="acceso-rapido">
+    <scan class="acceso-rapido-texto">Acceso rápido:</scan>
+    <button type="submit" class="btn-acceso-rapido">Admin</button>
+    <button type="submit" class="btn-acceso-rapido">Usuario</button>
+  </div>
+
+  <input type="email" placeholder="Correo electrónico" class="input-standard">
+  <input type="password" placeholder="Contraseña" class="input-standard">
+  <button type="submit" class="btn-estandar">Ingresar</button>
+  <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
+</form>
+
+<!--caja de crear usuario-->
+<form action="main.html" method="get" class="cajaCrearUsuario">
+  <h2>Crear Cuenta</h2>
+    <input type="text" placeholder="Nombre completo" class="input-standard">
+    <input type="email" placeholder="Correo electrónico" class="input-standard">
+    <input type="password" placeholder="Contraseña" class="input-standard">
+    <button type="submit" class="btn-estandar">Crear cuenta</button>
+    <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
+</form>
+
+    <footer class="footer-ingreso">
+  <p>&copy; 2026 Figuras Coleccionables - PW1-2026</p>
+</footer>
 </body>
 </html>

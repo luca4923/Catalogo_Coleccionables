@@ -6,6 +6,7 @@
     background-color: #3E3E41;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     
 }
 
@@ -18,7 +19,6 @@
 .buscador{
     width: 10%;
     height: 2vh;
-   margin-left: auto;
    margin-right: 1vh ;
    border-radius: 25px; 
    border: 1px solid #ccc; 
@@ -26,14 +26,55 @@
    
 }
 
-.buscador::placeholder{
-    font-size: 14px;
-}
 /*Header*/
 
-.tarjetas{
+.separador{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/*Parte de las figuras*/
+.cajas{
+   width: 20%;
+   max-width: 100%;
+   
+   border-radius: 5px;
+   
+}
+
+.colecciones{
     display: flex;
-    justify-content: center;
-    padding: 5vh;
-    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+
+    max-width: 100%;  /* Impide que la imagen sea más ancha que el contenedor */
+    height: auto;     /* Mantiene la proporción original de la imagen */
+
+    margin-left: 10%;
+    margin-right: 10%;
+     
+}
+
+.figura{
+    width: 100%;
+    
+}
+
+.descripcion{
+    text-size-adjust: calc(50%);
+}
+
+
+/*footer*/
+
+.footer{
+    margin-top: 10%;
+    background-color: #000;
+    align-items: center;
+}
+
+.texto_del_footer{
+    color: aliceblue;
+     font-size: 9px;
 }

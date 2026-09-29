@@ -55,10 +55,8 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 5%;
-
-    max-width: 100%;  /* Impide que la imagen sea más ancha que el contenedor */
-    height: auto;     /* Mantiene la proporción original de la imagen */
-
+    max-width: 100%;  
+    height: auto;     
     margin-left: 10%;
     margin-right: 10%;
      
@@ -75,7 +73,6 @@ body{
     color: inherit;
     font-size: 7px;
 }
-
 
 
 /*footer*/

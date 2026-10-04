@@ -1,89 +1,232 @@
-*{
+* {
     margin: 0px;
-   
+
 }
 
-body{
- font-family: Ubuntu, Helvetica, sans-serif;
+body {
+    font-family: Ubuntu, Helvetica, sans-serif;
+
 }
+
 
 /*Header*/
-.cabecera{
-    background-color: #f6f6f6;
+.cabecera {
+    background-color: #00201D;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
+
 }
 
-.logo{
-    width: 10%;
-    padding-left: 1vh;
-    
+.cabecera .font {
+    color: #f5faf9;
+    font-size: 1.5vw;
+    font-weight: bold;
+    fond-color: #f5faf9;
 }
 
-.buscador{
-    width: 10%;
-    height: 2vh;
-   margin-right: 1vh ;
-   border-radius: 25px; 
-   border: 1px solid #ccc; 
-   padding: 0px;
-   
+.logo {
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.log-imagen {
+    width: 12vw;
+    height: 9.5vh;
+
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 0px;
+    height: 10vh;
+    width: 20vw;
+}
+
+.sub-navegacion {
+    font-size: 1.2vw;
+    color: #dcdcdc;
+
+    cursor: pointer;
+}
+
+.buscador {
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 5px;
+    align-items: center
+}
+
+.buscador-input {
+    flex: 1 1 auto;
+    padding: 0 1vw;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: #060606;
+    font-size: 10%;
+    width: 10vw;
+    height: 3vh;
+    border: thin;
+    outline: none;
+
+}
+
+.buscador-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+}
+
+.buscador-boton-imagen {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 18px;
+    width: 100%;
+    min-width: 15px;
+    height: 3vh;
+    background-color: #00201D;
+
+}
+
+.favoritos-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1vw;
+}
+
+.carrito-imagen {
+    height: 3.02vh;
+    width: 1.41vw;
+}
+
+
+.favoritos {
+    width: 1.53vw;
+    height: 2.70vh;
+}
+
+.carrito-boton {
+    width: 1.3vw;
+    height: 1.7vh;
 }
 
 /*Header*/
 
-.separador{
-    padding-bottom: 20px;
-    padding-top: 20px;
+
+
+.banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+
 }
 
 /*Parte de las figuras*/
-.cajas{
-   width: 20%;
-   max-width: 100%;
-   
-   border-radius: 5px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   
+.cajas {
+    width: 20%;
+    max-width: 100%;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    box-sizing: border-box;
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+
 }
 
-.colecciones{
+.colecciones {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 5%;
-    max-width: 100%;  
-    height: auto;     
+    max-width: 100%;
+    height: auto;
     margin-left: 10%;
     margin-right: 10%;
-     
+
 }
 
-.figura{
+.figura {
     width: 100%;
-    
+
 }
 
-.descripcion{
+.descripcion {
     text-size-adjust: calc(50%);
     text-decoration: none;
     color: inherit;
-    font-size: 7px;
+    font-size: 1.2vw;
 }
 
+.precio {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.5vw;
+}
+
+.agregar-al-carrito {
+    max-width: 100%;
+
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 7px;
+
+}
+
+.agregar-al-carrito button {
+    height: 3.5vh;
+    width: 100%;
+    font-size: 7px;
+    color: #f5faf9;
+    background-color: #0A4B3E;
+    border-radius: 15px;
+    border: none;
+
+}
+
+.btn {
+    cursor: pointer;
+
+}
 
 /*footer*/
 
-.footer{
+.footer {
+    display: flex;
+    justify-content: bottom;
     margin-top: 10%;
-    background-color: #000;
-    align-items: center;
+    background-color: #0A4B3E;
+    align-items: bottom;
 }
 
-.texto_del_footer{
+.texto_del_footer {
+
     color: aliceblue;
-     font-size: 9px;
+    font-size: 9px;
+    margin: 2vh
 }

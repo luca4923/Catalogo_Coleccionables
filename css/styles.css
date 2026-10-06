@@ -229,3 +229,64 @@ body {
     font-size: 9px;
     margin: 2vh
 }
+
+/*Thiago*/
+.contenedor-mi-cuenta{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.campo-nav{
+
+    width: 27%;
+    background-color: #F2F2F2;
+    height: 70em;
+}
+.lista-secciones{
+    padding: 50px 5px 5px 180px;
+    display: flex;
+    flex-direction: column;
+
+}
+.seleccion{
+    width: 180px;
+    padding: 0.5em 7em 0.5em 1em;
+    background-color: #fff;
+    border-left: 2px solid #000;
+}
+.secciones{
+    width: 180px;
+    padding: 0.5em 7em 0.5em 1em;
+    background-color: #F2F2F2;
+    
+}
+
+.secciones:hover{
+    background-color: #ddd;
+}
+.seleccion:hover{
+    background-color: #ddd;
+}
+
+.enlaces-nav{
+    text-decoration: none ;
+    font-family:monospace;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+.imagen-nav{
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+}
+.cerrar-sesion{
+    font-size: 1.1em;
+    width: 130px;
+    padding: 1em 7em 1em 20px;
+    text-decoration: underline;
+    text-decoration-color: #aaa ;
+}
+.cerrar-sesion:hover{
+    text-decoration-color: #000 ;
+}

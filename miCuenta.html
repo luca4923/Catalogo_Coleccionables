@@ -6,22 +6,72 @@
     <title>Mi Cuenta</title>
     <link rel="stylesheet" href="css/styles.css" >
   </head>
-  <body>
-    <header class="cabecera">
-      <img class="logo" src="imagenes/logo_sin_fondo.png" alt="" />
-      <input class="buscador" type="search" />
+<body>
+  <header class="cabecera">
+
+        <div class="logo">
+            <a class="logo-link" href="https://www.youtube.com/watch?v=DLzxrzFCyOs&list=RDDLzxrzFCyOs&start_radio=1">
+                <img class="log-imagen" src="imagenes/logo-fondo-verde.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="navegacion">
+            <a href="main.html"><h6 class="sub-navegacion">Inicio</h6></a>
+            <h6 class="sub-navegacion">Mi Cuenta</h6>
+            <h6 class="sub-navegacion">Carrito</h6>
+        </div>
+
+        <div class="buscador">
+            <input class="buscador-input" type="text">
+
+            <button type="submit" class="buscador-boton" aria-label="Buscar">
+                <img class="buscador-boton-imagen" src="imagenes/search.webp" alt="">
+            </button>
+
+        </div>
+
+        <div class="favoritos-carrito"> 
+            <img class="favoritos" src="imagenes/corazon.png" alt="">
+            <img class="carrito-imagen" src="imagenes/carrito.png" alt="">
+        </div>
+
     </header>
 
-    <nav>
-      <a href="miCuenta.html">MI CUENTA</a>
-      <a href="misFavoritos.html">MIS FAVORITOS</a>
-      <a href="">MIS PEDIDOS</a>
-      <a href="">CONSULTAS</a>
-      <a href="">PREFERENCIAS</a>
-      <a href="">CERRAR SESION</a>
-    </nav>
+<div class="contenedor-mi-cuenta">
 
-    <div>
+    <div class="campo-nav">
+    <nav>
+      
+      <div class="lista-secciones">
+        <div class="seleccion">
+          <img src="imagenes/usuario.png" alt="mi cuenta" class="imagen-nav">
+          <a href="miCuenta.html" class="enlaces-nav ">MI CUENTA</a>
+        </div>
+        <div class="secciones">
+          <img src="imagenes/favoritos.png" alt="favortitos" class="imagen-nav">
+          <a href="misFavoritos.html" class="enlaces-nav">MIS FAVORITOS</a>
+        </div>
+        <div class="secciones">
+          <img src="imagenes/bolsa.png" alt="compras" class="imagen-nav">
+          <a href="" class="enlaces-nav">MIS PEDIDOS</a>
+        </div>
+        <div class="secciones">
+          <img src="imagenes/consulta.png" alt="consulta" class="imagen-nav">
+          <a href="" class="enlaces-nav">CONSULTAS</a>
+        </div>
+        <div class="secciones">
+          <img src="imagenes/preferencias.png" alt="preferencias" class="imagen-nav">
+          <a href="" class="enlaces-nav">PREFERENCIAS</a>
+        </div>
+        <div class="cerrar-sesion">
+          <a href="" class="enlaces-nav">CERRAR SESION</a>
+        </div>
+      </div>
+
+    </nav>      
+    </div>
+
+    <div class="mi-cuenta">
       <h1>MIS DATOS</h1>
       <p>
         Actualizá tu información personal para mantener los datos de tu cuenta
@@ -34,7 +84,7 @@
         <p>23-12-1994</p>
         <p>HOMBRE</p>
         <p>37.720.822</p>
-        <button>EDITAR</button>
+        <button type="button">EDITAR</button>
       </section>
 
       <section>
@@ -44,7 +94,7 @@
         <button>EDITAR</button>
         <h3>CONTRASEÑA</h3>
         <p>***********</p>
-        <button>EDITAR</button>
+        <button type="button">EDITAR</button>
       </section>
 
       <section>
@@ -53,8 +103,10 @@
         <p>SAN JUSTO, LA MATANZA</p>
         <p>B1754</p>
         <p>+54 9 11 2372-2323</p>
-        <button>EDITAR</button>
+        <button type="button">EDITAR</button>
       </section>
     </div>
-  </body>
+
+</div>
+</body>
 </html>

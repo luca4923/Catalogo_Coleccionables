@@ -1,0 +1,159 @@
+/*margen catalogo*/
+.catalogo_margen {
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor-imagen {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 0px 26px 26px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.margen_imagen {
+    width: 50%;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.imagen {
+    width: 2550px;
+    max-width: 100%;
+    height: auto;     
+}
+
+.descripcion {
+    flex: 1;
+    min-width: 0; 
+}
+
+.marca {
+    margin-top: 5px;
+}
+.titulo {
+    margin-bottom: 10px;
+}
+
+.precio {
+    margin: 20px 0px 10px 0px;
+}
+
+/*BOTONES*/
+.boton {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #007bff;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+.boton:active {
+    transform: scale(0.90);
+}
+
+.boton_carrito {
+    width: 100%;
+    border: none;
+    color: #0056b3;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #007bff93;
+    transition: transform 0.3s ease-in-out;
+}
+
+.boton_carrito:hover {
+    background-color:#007bff54;
+}
+
+.boton_carrito:active {
+    transform: scale(0.90);
+}
+
+.enlace {
+    text-decoration: none;
+    color:inherit;
+}
+
+.lista-despegable {
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: 1px solid #CCC;
+}
+
+.detalles-lista {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenido-lista {
+    padding: 10px 0;
+}
+
+.titulo-lista {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenido-lista p {
+    margin: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+/*Sección de recomendados*/
+
+.seccion-recomendados {
+    max-width: 1450px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.titulo-recomendado {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.productos {
+    display: flex;
+}
+
+.tarjetas {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 15px;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.tarjetas img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.titulo-figura {
+    margin: 5px 0;
+}
+
+.precio-figura {
+    margin-bottom: 10px;;
+}

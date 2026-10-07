@@ -198,6 +198,114 @@ body {
 }
 
 
+/*-------------------------------Parte de las figuras--------------------------------*/
+.cajas {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 15vw;
+    margin-bottom: 2%;
+}
+
+.colecciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1%;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65vw;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 42%);
+    border-radius: 7px;
+    margin-top: 4vh;
+    padding: 3vw;
+
+}
+
+.figura {
+    width: 100%;
+    position: relative;
+
+}
+
+.descripcion {
+    text-size-adjust: calc(50%);
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2vw;
+}
+
+.precio {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.5vw;
+}
+
+.carrito-boton {
+    width: 1.3vw;
+    height: 1.7vh;
+}
+
+.agregar-al-carrito {
+    max-width: 100%;
+
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 7px;
+
+}
+
+.agregar-al-carrito button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5vh;
+    width: 100%;
+    font-size: 1.2vw;
+    color: #f5faf9;
+    background-color: #0A4B3E;
+    border-radius: 15px;
+    border: none;
+}
+
+.agregar-al-carrito button:hover {
+    background-color: #068355;
+    color: #f5faf9;
+}
+
+.btn {
+    cursor: pointer;
+
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+.colecciones_izquierda {
+    border: 1px solid #0A4B3E;
+    width: 20%;
+}
+
+.figura-corazon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 2vw;
+}
+
 
 
 /*footer*/

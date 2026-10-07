@@ -11,7 +11,7 @@ body {
 
 /*Header*/
 .cabecera {
-    background-color: #00201D;
+    background-color: #056C5C;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -231,6 +231,8 @@ body {
 }
 
 /*Thiago*/
+/*NAV*/
+
 .contenedor-mi-cuenta{
     display: flex;
     flex-wrap: nowrap;
@@ -289,4 +291,55 @@ body {
 }
 .cerrar-sesion:hover{
     text-decoration-color: #000 ;
+}
+/*mi cuenta*/
+.mi-cuenta{
+    font-family: monospace;
+}
+.mini-encabezado{
+    margin: 30px 40px 5px 40px;
+    padding: 10px;
+}
+.cajas-con-sombras{
+    background-color: #F2F2F2 ;
+    margin: 30px 40px 5px 40px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+}
+.editar{
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    background-color: none;
+    border: 2px solid #11917d;
+    border-radius: 20px;
+    padding: 5px 0px 5px 0px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: #11917d;
+    width: 80px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.editar:hover{
+    color: #056C5C;
+    border-color: #056C5C;
+}
+.imagen-editar{
+    width: 8px;
+    margin-left:11px;
+    margin-right: 8px;
+}
+
+/*MIS FAVORITOS*/
+
+.imagen-producto-favorito{
+    width: 200px;
+}
+.eliminar-img{
+    width: 10px;
 }

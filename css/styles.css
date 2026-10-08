@@ -58,7 +58,7 @@ body {
 
 .sub-navegacion {
     font-size: 1.2vw;
-    color: #014d23;
+    color: #056C5C;
     cursor: pointer;
 }
 
@@ -112,6 +112,7 @@ body {
     gap: 1rem;
     padding-right: 0px;
     padding-right: 3vw;
+    height: 100%;
 }
 
 .carrito-imagen {
@@ -238,7 +239,7 @@ body {
     border-radius: 7px;
     margin-top: 4vh;
     padding: 3vw;
-
+    margin-bottom: 5%;
 }
 
 .figura {
@@ -328,7 +329,7 @@ body {
 .footer {
     display: flex;
     justify-content: end;
-    margin-top: 10%;
+
     background-color: #f0f8f7;
 
     border-top: 1px solid #0A4B3E;
@@ -371,11 +372,16 @@ body {
 
 
 /*---------------------Thiago----------------------------*/
+.body-thiago{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .contenedor-mi-cuenta {
     display: flex;
 
-    height: 1000px;
+    height: 100%;
 }
+
 
 /*NAV*/
 
@@ -423,10 +429,10 @@ body {
 
 .enlaces-nav {
     text-decoration: none;
-    font-family: monospace;
+    font-family: 'Ubuntu', sans-serif;
     color: #000;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 
 }
 
@@ -447,7 +453,6 @@ body {
 .mi-cuenta {
     background-color: #fff;
     width: 73%;
-
 }
 
 .mini-encabezado {
@@ -462,7 +467,7 @@ body {
 
 .cajas-con-sombras {
     background-color: #F2F2F2;
-    margin: 30px 40px 5px 40px;
+    margin: 15px 40px 40px 40px;
     padding: 20px;
     position: relative;
     border-radius: 10px;
@@ -474,23 +479,22 @@ body {
     position: absolute;
     top: 9px;
     right: 10px;
-    background-color: none;
-    border: 2px solid #11917d;
-    border-radius: 20px;
+    background-color: #056C5C;
+    border-radius: 5px;
     padding: 5px 0px 5px 0px;
     font-size: 14px;
     font-weight: bold;
-    color: #11917d;
+    color:#eee; 
     width: 100px;
     height: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    border: none;
 }
 
 .editar:hover {
-    color: #056C5C;
-    border-color: #056C5C;
+    color: #fff;
 }
 
 .imagen-editar {
@@ -504,7 +508,6 @@ body {
 .interfaz-favoritos {
     display: flex;
     background-color: #fff;
-
 }
 
 /*Productos favoritos*/
@@ -578,6 +581,11 @@ body {
     width: 170px;
     height: 36px;
     margin-top: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.eliminar:hover{
+    background-color: #E1F2EE;
 }
 
 .eliminar-img {
@@ -592,10 +600,11 @@ body {
     background-color: #056C5C;
     color: #fff;
     border: none;
+    border-radius: 5px;
 }
 
 .agregar-carrito:hover {
-    background-color: #0f7a6a;
+    background-color: #045549;
 }
 
 .precio-favoritos {
@@ -606,11 +615,10 @@ body {
 }
 
 .final-encabezado {
-    margin-top: 6px;
     background-color: #056C5C;
     width: 100%;
     height: 8px;
-    margin-right: 40vw;
+
 }
 
 
@@ -735,70 +743,3 @@ body {
         width: 40vw;
     }
 }
-
-/*MODO OSCURO THIAGO*/
-
-@media (prefers-color-scheme: dark) {
-    .body-thiago {
-        background-color: #121212;
-        color: #fff;
-    }
-
-    .cabecera,
-    .campo-nav,
-    .secciones {
-        background-color: #1e1e1e;
-    }
-
-    .mi-cuenta,
-    .interfaz-favoritos {
-        background-color: #121212;
-    }
-
-    .cajas-con-sombras,
-    .cajas-favoritos,
-    .seleccion {
-        background-color: #2a2a2a;
-        color: #fff;
-    }
-
-    .enlaces-nav {
-        color: #fff;
-    }
-
-    .sub-navegacion,
-    .precio-favoritos {
-        color: #5cdbad;
-    }
-
-    .texto-titulo,
-    .descripcion-cantidad {
-        color: #bbb;
-    }
-
-    .secciones:hover,
-    .seleccion:hover {
-        background-color: #354a42;
-    }
-    .eliminar {
-        background-color: #383838;
-        color: #fff;
-        border: 1px solid #555;
-    }
-
-    .eliminar:hover {
-        background-color: #505050;
-    }
-        .editar {
-        background-color: #383838;
-        color: #5cdbad;
-        border: 2px solid #5cdbad;
-    }
-
-    .editar:hover {
-        background-color: #505050;
-        color: #9bf2d0;
-        border-color: #9bf2d0;
-    }
-}
-

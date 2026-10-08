@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/styles.css" >
 </head>
 <body>
-<header class="cabecera">
-
+    <header class="cabecera">
+        
         <div class="logo">
             <a class="logo-link" href="https://www.youtube.com/watch?v=DLzxrzFCyOs&list=RDDLzxrzFCyOs&start_radio=1">
                 <img class="log-imagen" src="imagenes/logo-en-fondo-blanco.png" alt="Logo">
@@ -16,25 +16,31 @@
         </div>
 
         <div class="navegacion">
-            <h6 class="sub-navegacion">Inicio</h6>
-            <h6 class="sub-navegacion">Mi Cuenta</h6>
+            <a href="main.html" class="enlace" >
+                <h6 class="sub-navegacion">Inicio</h6>
+            </a>
+
+            <a href="Ingreso.html" class="enlace">
+                <h6 class="sub-navegacion">Mi Cuenta</h6>
+            </a>
+                
             <h6 class="sub-navegacion">Carrito</h6>
         </div>
 
         <div class="buscador">
             <input class="buscador-input" type="text">
-
             <button type="submit" class="buscador-boton" aria-label="Buscar">
-                <img class="buscador-boton-imagen" src="imagenes/search.webp" alt="">
+                <img src="imagenes/logoBuscador.svg" alt="buscador" class="buscador-icono">
+                </svg>
             </button>
-
         </div>
 
         <div class="favoritos-carrito">
-            <img class="favoritos" src="imagenes/corazon_verde.png" alt="">
-            <img class="carrito-imagen" src="imagenes/carrito_verde.png" alt="">
+            <a href="misFavoritos.html">
+                <img class="favoritos" src="imagenes/favorito.svg" alt="Favorito">
+            </a>
+            <img class="carrito-imagen" src="imagenes/carrito.svg" alt="Carrito">
         </div>
-
     </header>
         <div class="final-encabezado"></div>
 

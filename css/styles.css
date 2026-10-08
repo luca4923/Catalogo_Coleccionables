@@ -116,6 +116,7 @@ body {
 }
 
 .carrito-imagen {
+    margin-bottom: 5px;
     height: 3vh;
     width: 2vw;
     cursor: pointer;
@@ -257,7 +258,7 @@ body {
 
 .precio {
     font-weight: bold;
-    color: #007bff;
+    color: #111111;
     font-size: 1.5vw;
 }
 
@@ -284,16 +285,16 @@ body {
     align-items: center;
     height: 3.5vh;
     width: 100%;
-    font-size: 1.2vw;
-    color: #f5faf9;
-    background-color: #0A4B3E;
-    border-radius: 15px;
+    font-size: 1vw;
+    color: white;
+    background-color: #056C5C;
+    border-radius: 5px;
     border: none;
 }
 
 .agregar-al-carrito button:hover {
-    background-color: #068355;
-    color: #f5faf9;
+    background-color: #045a4b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
@@ -313,10 +314,19 @@ body {
     width: 20%;
 }
 
+.cajas a {
+    position: relative;
+    display: inline-block;
+}
+
+.figura {
+    display: block;
+}
+
 .figura-corazon {
     position: absolute;
-    top: 90%;
-    right: 79%;
+    top: 0;
+    left: 0;
     width: 2.5vw;
 }
 
@@ -350,7 +360,7 @@ body {
     margin: 2vh
 }
 
-.logo-footer {
+.redes_sociales {
     width: 30%;
     margin-top: 6vh;
     margin-left: 15vw;
@@ -363,6 +373,155 @@ body {
     justify-content: center;
     align-items: center;
     height: 4vh;
+/*-----------------Estilo de tablet------------------*/
+@media (width <=768px) {
+    body {
+        background-color: rgb(246, 252, 253);
+    }
+
+    .log-imagen {
+        width: 21vw;
+        height: 10vh;
+    }
+
+    .navegacion {
+        width: 27vw;
+    }
+
+    .sub-navegacion {
+        font-size: 2.1vw;
+    }
+
+    .favoritos {
+        width: 4vw;
+    }
+
+    .carrito-imagen {
+        height: 3vh;
+        width: 4vw;
+        cursor: pointer;
+    }
+
+    .boton-categoria {
+        font-size: 2.5vw;
+    }
+
+    .texto-verde {
+        font-size: 3.5vw;
+    }
+
+    .colecciones {
+        width: 90vw;
+    }
+
+    .cajas {
+        width: 40vw;
+    }
+
+    .descripcion {
+        font-size: 5vw;
+    }
+
+    .precio {
+        font-size: 5vw;
+    }
+
+    .texto_del_footer {
+        font-size: 2.1vw;
+    }
+
+    .footer {
+        flex-wrap: wrap
+    }
+
+    .logo-footer {
+        width: 23vw;
+    }
+
+    .btn-text {
+        font-size: 2.1vw;
+    }
+
+    .carrito-boton {
+        width: 10%;
+    }
+
+    .figura-corazon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5vw;
+    }
+
+}
+
+/*-----------------Estilo de tablet------------------*/
+/*-----------------Estilo de celular-----------------*/
+
+@media (width <=391px) {
+
+    .texto-banner {
+        position: absolute;
+        top: 12%;
+        left: 2%;
+    }
+
+    .sub-navegacion {
+        font-size: 0vw;
+    }
+
+    .log-imagen {
+        width: 43vw;
+        height: 10vh;
+    }
+
+    .carrito-imagen {
+        height: 0vh;
+        width: 0vw;
+    }
+
+    .favoritos {
+        width: 0vw;
+    }
+
+
+    .colecciones {
+        width: 90vw;
+        gap: 1vh;
+    }
+
+    .cajas {
+        width: 41vw;
+    }
+
+    .descripcion {
+        font-size: 8vw;
+    }
+
+    .precio {
+        font-size: 8vw;
+    }
+
+    .agregar-al-carrito button {
+        height: 2.5vh;
+        width: 60%;
+        justify-content: flex-start
+    }
+
+    .footer-logo {
+        margin-right: 0vw;
+    }
+
+    .logo-footer {
+        width: 40vw;
+    }
+
+    .redes_sociales {
+        width: 32%;
+    }
+
+
+
 }
 
 
@@ -370,7 +529,7 @@ body {
 
 
 
-
+/*---------------------Estilo de celular-----------------*/
 /*---------------------Thiago----------------------------*/
 .body-thiago{
     font-family: 'Ubuntu', sans-serif;

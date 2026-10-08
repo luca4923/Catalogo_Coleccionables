@@ -312,10 +312,19 @@ body {
     width: 20%;
 }
 
+.cajas a {
+    position: relative;
+    display: inline-block;
+}
+
+.figura {
+    display: block;
+}
+
 .figura-corazon {
     position: absolute;
-    top: 90%;
-    right: 79%;
+    top: 0;
+    left: 0;
     width: 2.5vw;
 }
 

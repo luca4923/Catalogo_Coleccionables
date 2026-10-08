@@ -82,8 +82,8 @@
 .boton_carrito:active {
     transform: scale(0.90);
 }
-
-.enlace {
+.productos .enlace{
+    flex: 1;
     text-decoration: none;
     color:inherit;
 }

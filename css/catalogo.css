@@ -51,13 +51,13 @@
     padding: 0.85rem 1.75rem;
     cursor: pointer;
     border-radius: 2rem;
-    background-color: #007bff;
+    background-color: #056C5C;
     transition: transform 0.3s ease-in-out;
     margin-top: 0.6rem;
 }
 
 .boton:hover {
-    background-color: #0056b3;
+    background-color: #045549;
 }
 
 .boton:active {
@@ -66,17 +66,18 @@
 
 .boton_carrito {
     width: 100%;
-    border: none;
-    color: #0056b3;
+    border: 2px solid #000;
+    color: #333;
     padding: 0.85rem 1.75rem;
     cursor: pointer;
     border-radius: 2rem;
-    background-color: #007bff93;
+    background-color: #fff;
     transition: transform 0.3s ease-in-out;
 }
 
 .boton_carrito:hover {
-    background-color:#007bff54;
+    color: #000;
+    background-color:#E1F2EE;
 }
 
 .boton_carrito:active {

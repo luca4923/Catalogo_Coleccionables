@@ -115,6 +115,7 @@ body {
 }
 
 .carrito-imagen {
+    margin-bottom: 5px;
     height: 3vh;
     width: 2vw;
     cursor: pointer;

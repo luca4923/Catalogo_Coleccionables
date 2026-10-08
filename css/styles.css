@@ -495,9 +495,10 @@ body {
 }
 
 .imagen-editar {
-    width: 8px;
+    width: 12px;
     margin-left: 11px;
     margin-right: 8px;
+    height: 100%;
 }
 
 /*MIS FAVORITOS*/
@@ -735,3 +736,70 @@ body {
         width: 40vw;
     }
 }
+
+/*MODO OSCURO THIAGO*/
+
+@media (prefers-color-scheme: dark) {
+    .body-thiago {
+        background-color: #121212;
+        color: #fff;
+    }
+
+    .cabecera,
+    .campo-nav,
+    .secciones {
+        background-color: #1e1e1e;
+    }
+
+    .mi-cuenta,
+    .interfaz-favoritos {
+        background-color: #121212;
+    }
+
+    .cajas-con-sombras,
+    .cajas-favoritos,
+    .seleccion {
+        background-color: #2a2a2a;
+        color: #fff;
+    }
+
+    .enlaces-nav {
+        color: #fff;
+    }
+
+    .sub-navegacion,
+    .precio-favoritos {
+        color: #5cdbad;
+    }
+
+    .texto-titulo,
+    .descripcion-cantidad {
+        color: #bbb;
+    }
+
+    .secciones:hover,
+    .seleccion:hover {
+        background-color: #354a42;
+    }
+    .eliminar {
+        background-color: #383838;
+        color: #fff;
+        border: 1px solid #555;
+    }
+
+    .eliminar:hover {
+        background-color: #505050;
+    }
+        .editar {
+        background-color: #383838;
+        color: #5cdbad;
+        border: 2px solid #5cdbad;
+    }
+
+    .editar:hover {
+        background-color: #505050;
+        color: #9bf2d0;
+        border-color: #9bf2d0;
+    }
+}
+

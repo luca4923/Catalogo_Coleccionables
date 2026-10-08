@@ -53,7 +53,7 @@ body {
 
 .enlace {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 .sub-navegacion {
@@ -347,7 +347,13 @@ body {
     margin: 2vh
 }
 
+.logo-footer {
+    width: 30%;
+    margin-top: 6vh;
+    margin-left: 15vw;
 
+
+}
 
 
 
@@ -356,15 +362,16 @@ body {
 
 
 /*---------------------Thiago----------------------------*/
-.contenedor-mi-cuenta{
+.contenedor-mi-cuenta {
     display: flex;
 
     height: 1000px;
 }
+
 /*NAV*/
 
 
-.campo-nav{
+.campo-nav {
 
     width: 27%;
     background-color: #F2F2F2;
@@ -373,48 +380,54 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.lista-secciones{
+
+.lista-secciones {
     width: 75%;
     margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.seleccion{
+
+.seleccion {
     width: 100%;
-    padding:0.8em 0 0.8em 1em;
+    padding: 0.8em 0 0.8em 1em;
     background-color: #fff;
     border-left: 2px solid #03A66A;
 }
-.secciones{
+
+.secciones {
     width: 100%;
-    padding:0.8em 0 0.8em 1em;
+    padding: 0.8em 0 0.8em 1em;
     background-color: #F2F2F2;
-    
+
 }
 
 
-.secciones:hover{
-    background-color: #E1F2EE;
-}
-.seleccion:hover{
+.secciones:hover {
     background-color: #E1F2EE;
 }
 
-.enlaces-nav{
-    text-decoration: none ;
-    font-family:monospace;
+.seleccion:hover {
+    background-color: #E1F2EE;
+}
+
+.enlaces-nav {
+    text-decoration: none;
+    font-family: monospace;
     color: #000;
     font-weight: bold;
     font-size: 1.2em;
-    
+
 }
-.imagen-nav{
+
+.imagen-nav {
     width: 16px;
     height: 16px;
     margin-right: 20px;
 }
-.separador{
+
+.separador {
     width: 100%;
     background-color: #aaa;
     height: 1px;
@@ -422,21 +435,24 @@ body {
 }
 
 /*mi cuenta*/
-.mi-cuenta{
+.mi-cuenta {
     background-color: #fff;
     width: 73%;
 
 }
-.mini-encabezado{
+
+.mini-encabezado {
     margin: 30px 40px 5px 40px;
     padding: 10px;
 }
-.texto-titulo{
+
+.texto-titulo {
     font-weight: bold;
     color: #888;
 }
-.cajas-con-sombras{
-    background-color: #F2F2F2 ;
+
+.cajas-con-sombras {
+    background-color: #F2F2F2;
     margin: 30px 40px 5px 40px;
     padding: 20px;
     position: relative;
@@ -444,7 +460,8 @@ body {
     box-shadow: 0 0 10px #777;
     width: 90%;
 }
-.editar{
+
+.editar {
     position: absolute;
     top: 9px;
     right: 10px;
@@ -461,48 +478,54 @@ body {
     flex-direction: row;
     align-items: center;
 }
-.editar:hover{
+
+.editar:hover {
     color: #056C5C;
     border-color: #056C5C;
 }
-.imagen-editar{
+
+.imagen-editar {
     width: 8px;
-    margin-left:11px;
+    margin-left: 11px;
     margin-right: 8px;
 }
 
 /*MIS FAVORITOS*/
-.interfaz-favoritos{
+.interfaz-favoritos {
     display: flex;
     background-color: #fff;
 
 }
+
 /*Productos favoritos*/
-.productos-favoritos{
+.productos-favoritos {
     display: flex;
     flex-direction: column;
     width: 73%;
 }
-    /*sub encabezado*/
-.sub-encabezado{
+
+/*sub encabezado*/
+.sub-encabezado {
     margin: 30px 40px 2px 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.titulo-favoritos{
+
+.titulo-favoritos {
     font-size: 26px;
 }
-.descripcion-cantidad{
+
+.descripcion-cantidad {
     color: #555;
     margin: 0 6px;
     font-size: 13px;
 }
 
-    /*cajas favoritos*/
+/*cajas favoritos*/
 
-.cajas-favoritos{
-    background-color: #F2F2F2 ;
+.cajas-favoritos {
+    background-color: #F2F2F2;
     margin: 22px;
     padding: 20px;
     position: relative;
@@ -513,42 +536,46 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 /*Primera columna*/
-.imagen-producto-favorito{
+.imagen-producto-favorito {
     width: 150px;
     height: 100%;
 }
 
 /*segunda columna*/
-.caja-descripcion{
+.caja-descripcion {
     display: flex;
     flex-direction: column;
     margin: 8px;
 }
 
 
-.descripcion-principal{
+.descripcion-principal {
     width: 100%;
     font-weight: bold;
 }
 
 /*ultima columna de caja*/
-.caja-final{
+.caja-final {
     display: flex;
     flex-direction: column;
     align-items: end;
     margin-left: auto;
 }
-.eliminar{
+
+.eliminar {
     width: 170px;
     height: 36px;
     margin-top: 5px;
 }
-.eliminar-img{
+
+.eliminar-img {
     display: inline;
     width: 10px;
 }
-.agregar-carrito{
+
+.agregar-carrito {
     width: 170px;
     height: 36px;
     font-weight: bold;
@@ -556,17 +583,19 @@ body {
     color: #fff;
     border: none;
 }
-.agregar-carrito:hover{
+
+.agregar-carrito:hover {
     background-color: #0f7a6a;
 }
-.precio-favoritos{
+
+.precio-favoritos {
     font-size: 24px;
     font-weight: bold;
     margin: 12px 0;
-    color:  #056C5C;
+    color: #056C5C;
 }
 
-.final-encabezado{
+.final-encabezado {
     margin-top: 6px;
     background-color: #056C5C;
     width: 100%;

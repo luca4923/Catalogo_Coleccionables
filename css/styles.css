@@ -261,9 +261,9 @@ body {
 }
 
 .carrito-boton {
-    width: 1.3vw;
-    height: 1.7vh;
+    width: 14%;
 }
+
 
 .agregar-al-carrito {
     max-width: 100%;
@@ -314,10 +314,12 @@ body {
 
 .figura-corazon {
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 2vw;
+    top: 90%;
+    right: 79%;
+    width: 2.5vw;
 }
+
+
 
 
 
@@ -600,4 +602,128 @@ body {
     background-color: #056C5C;
     width: 100%;
     height: 8px;
+    margin-right: 40vw;
+}
+
+
+/*-----------------Estilo de tablet------------------*/
+@media (width <=768px) {
+    body {
+        background-color: rgb(246, 252, 253);
+    }
+
+    .log-imagen {
+        width: 21vw;
+        height: 10vh;
+    }
+
+    .navegacion {
+        width: 27vw;
+    }
+
+    .sub-navegacion {
+        font-size: 2.1vw;
+    }
+
+    .favoritos {
+        width: 4vw;
+    }
+
+    .carrito-imagen {
+        height: 3vh;
+        width: 4vw;
+        cursor: pointer;
+    }
+
+    .boton-categoria {
+        font-size: 2.5vw;
+    }
+
+    .texto-verde {
+        font-size: 3.5vw;
+    }
+
+    .colecciones {
+        width: 90vw;
+    }
+
+    .cajas {
+        width: 40vw;
+    }
+
+    .descripcion {
+        font-size: 5vw;
+    }
+
+    .precio {
+        font-size: 5vw;
+    }
+
+    .texto_del_footer {
+        font-size: 2.1vw;
+    }
+
+    .footer {
+        flex-wrap: wrap
+    }
+
+    .logo-footer {
+        width: 23vw;
+    }
+
+}
+
+/*-----------------Estilo de tablet------------------*/
+/*-----------------Estilo de celular-----------------*/
+
+@media (width <=391px) {
+
+    .texto-banner {
+        position: absolute;
+        top: 12%;
+        left: 2%;
+    }
+
+    .sub-navegacion {
+        font-size: 0vw;
+    }
+
+    .log-imagen {
+        width: 43vw;
+        height: 10vh;
+    }
+
+    .carrito-imagen {
+        height: 0vh;
+        width: 0vw;
+    }
+
+    .favoritos {
+        width: 0vw;
+    }
+
+
+    .colecciones {
+        gap: 3vh;
+    }
+
+    .cajas {
+        width: 80vw;
+    }
+
+    .descripcion {
+        font-size: 16vw;
+    }
+
+    .precio {
+        font-size: 16vw;
+    }
+
+    .footer-logo {
+        margin-right: 0vw;
+    }
+
+    .logo-footer {
+        width: 40vw;
+    }
 }

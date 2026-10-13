@@ -387,7 +387,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4vh;}
+    height: 4vh;
+}
+
 /*-----------------Estilo de tablet------------------*/
 @media (width <=768px) {
     body {
@@ -538,7 +540,6 @@ body {
 
 
 }
-
 
 
 

@@ -5,9 +5,9 @@
 
 body {
     font-family: Ubuntu, Helvetica, sans-serif;
-    background: hsl(165, 36%, 96%);
+    
 }
-
+/*background: hsl(165, 36%, 96%);*/
 
 /*Header*/
 .cabecera {
@@ -139,7 +139,14 @@ body {
     transition: transform 0.3s ease;
 }
 
+/*---------------Modo oscuro-----------------*/
+.oscuroHeader{
+    background-color: #000000;
+}
 
+.oscuroBody{
+    background-color: #121212;
+}
 
 
 /*-------------------------------------Header---------------------------------------*/
@@ -331,8 +338,11 @@ body {
     width: 2.5vw;
 }
 
+/*---------------Modo oscuro-----------------*/
 
-
+.coleccionesOscuro{
+    background-color: #f20707;
+}
 
 
 /*footer*/
@@ -341,7 +351,6 @@ body {
     display: flex;
     justify-content: end;
 
-    background-color: #f0f8f7;
 
     border-top: 1px solid #0A4B3E;
     justify-content: space-between;

@@ -5,8 +5,9 @@
 
 body {
     font-family: Ubuntu, Helvetica, sans-serif;
-    
+
 }
+
 /*background: hsl(165, 36%, 96%);*/
 
 /*Header*/
@@ -140,14 +141,17 @@ body {
 }
 
 /*---------------Modo oscuro-----------------*/
-.oscuroHeader{
+.oscuroHeader {
     background-color: #000000;
 }
 
-.oscuroBody{
+.oscuroBody {
     background-color: #121212;
 }
 
+.oscuroTexto {
+    color: #f5faf9;
+}
 
 /*-------------------------------------Header---------------------------------------*/
 /*-------------------------------------BANER----------------------------------------*/
@@ -223,7 +227,7 @@ body {
 /*-------------------------------Parte de las figuras--------------------------------*/
 .cajas {
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 64%);
     box-sizing: border-box;
     padding: 1%;
     display: flex;
@@ -338,10 +342,21 @@ body {
     width: 2.5vw;
 }
 
+.btn-carrito {
+    background-color: #056C5C;
+    color: rgb(242, 244, 242);
+    border: none;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    font-size: 1vw;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
 /*---------------Modo oscuro-----------------*/
 
-.coleccionesOscuro{
-    background-color: #f20707;
+.coleccionesOscuro {
+    background-color: #1e1e1e;
 }
 
 

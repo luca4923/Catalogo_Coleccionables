@@ -110,17 +110,19 @@ const productos = [Superman, Bartholomew_Kuma, Boba_Fett, Clicker, Frankenstein,
 
 /*Funcion que se encarga de poner las etiquetas en el HTML*/
 function crearTarjeta(producto) {
+
+
     /*Se crean las etiquetas que conforman las tarjetas*/
-    var Cajas = document.createElement("div");
-    
-    var Colecciones = document.querySelector("#Colecciones");
-    var tarjeta = document.createElement("div");
-    var imagen = document.createElement("img");
-    var descripcion = document.createElement("div");
-    var nombre = document.createElement("h3");
-    var precio = document.createElement("p");
-    var descripcionTexto = document.createElement("p");
-    var botonCarrito = document.createElement("button");
+    let Cajas = document.createElement("div");
+
+    let Colecciones = document.querySelector("#Colecciones");
+    let tarjeta = document.createElement("div");
+    let imagen = document.createElement("img");
+    let descripcion = document.createElement("div");
+    let nombre = document.createElement("h3");
+    let precio = document.createElement("p");
+    let descripcionTexto = document.createElement("p");
+    let botonCarrito = document.createElement("button");
 
     /*Se le asignan las clases a las etiquetas*/
 
@@ -131,10 +133,11 @@ function crearTarjeta(producto) {
     descripcion.classList.add("descripcion");
     precio.classList.add("precio");
     descripcionTexto.classList.add("descripcion-texto");
-    descripcionTexto.id = "Descripcion-Texto";
+
     botonCarrito.classList.add("btn-carrito");
 
-    /*Se le asignan los valores a las etiquetas*/
+
+    /*Se juntan los nodos*/
     Cajas.appendChild(tarjeta);
     Colecciones.appendChild(Cajas);
     imagen.src = producto.imagen;
@@ -148,17 +151,143 @@ function crearTarjeta(producto) {
     tarjeta.appendChild(descripcionTexto);
     botonCarrito.textContent = "Agregar al Carrito";
     tarjeta.appendChild(botonCarrito);
+
+
 }
 
 
-/*Filtrar*/
+
+
+/*--------------------Filtrar----------------*/
+
+const filtroTodos = document.querySelector("#boton-todas");
+var Todos = false;
+
+const filtroAnime = document.querySelector("#boton-anime");
+var Anime = false;
+
+const filtroVideojuegos = document.querySelector("#boton-videjuegos");
+var Videojuego = false;
+
+const filtroPeliculas = document.querySelector("#boton-peliculas");
+var Peliculas = false;
+
+const filtroComics = document.querySelector("#boton-comics");
+var Comics = false;
+
+
+/*----------Eventos en los Botones de filtro----------------*/
+filtroTodos.addEventListener("click", () => {
+    filtroTodos.classList.toggle("boton-activo");
+});
+
+filtroAnime.addEventListener("click", () => {
+    filtroAnime.classList.toggle("boton-activo");
+});
+
+filtroVideojuegos.addEventListener("click", () => {
+    filtroVideojuegos.classList.toggle("boton-activo");
+});
+
+filtroPeliculas.addEventListener("click", () => {
+    filtroPeliculas.classList.toggle("boton-activo");
+});
+
+filtroComics.addEventListener("click", () => {
+    filtroComics.classList.toggle("boton-activo");
+});
+
+
+
+filtroAnime.addEventListener("click", () => {
+    if (Anime) {
+        Anime = false;
+    } else {
+        Anime = true;
+    }
+    Todos = false;
+    filtrarProductos();
+
+});
+
+filtroVideojuegos.addEventListener("click", () => {
+    if (Videojuego) {
+        Videojuego = false;
+    } else {
+        Videojuego = true;
+    }
+    Todos = false;
+    filtrarProductos();
+});
+
+filtroPeliculas.addEventListener("click", () => {
+    if (Peliculas) {
+        Peliculas = false;
+    } else {
+        Peliculas = true;
+    }
+    Todos = false;
+    filtrarProductos();
+});
+
+filtroComics.addEventListener("click", () => {
+    if (Comics) {
+        Comics = false;
+    } else {
+        Comics = true;
+    }
+    Todos = false;
+    filtrarProductos();
+});
+
+
+filtroTodos.addEventListener("click", () => {
+    Todos = true;
+    filtrarProductos();
+    Todos = false;
+});
 
 
 
 /*productos.forEach(crearTarjeta);*/
 
-for (let i = 0; i < productos.length; i++) {
-    crearTarjeta(productos[i]);
+
+function filtrarProductos() {
+    const productosFiltrados = productos.filter(producto => producto.genero === "Anime");
+    const Colecciones = document.querySelector("#Colecciones");
+    Colecciones.replaceChildren();
+
+    if (Anime) {
+        for (let i = 0; i < productosFiltrados.length; i++) {
+            crearTarjeta(productosFiltrados[i]);
+        }
+    } if (Videojuego) {
+        const productosFiltrados = productos.filter(producto => producto.genero === "Videjuegos");
+        for (let i = 0; i < productosFiltrados.length; i++) {
+            crearTarjeta(productosFiltrados[i]);
+        }
+    } if (Peliculas) {
+        const productosFiltrados = productos.filter(producto => producto.genero === "Películas");
+        for (let i = 0; i < productosFiltrados.length; i++) {
+            crearTarjeta(productosFiltrados[i]);
+        }
+    } if (Comics) {
+        const productosFiltrados = productos.filter(producto => producto.genero === "Comics");
+        for (let i = 0; i < productosFiltrados.length; i++) {
+            crearTarjeta(productosFiltrados[i]);
+        }
+    } if (Todos) {
+        for (let i = 0; i < productos.length; i++) {
+            crearTarjeta(productos[i]);
+        }
+    }
+
+}
+
+
+
+
+function removerTarjetas(String) {
 }
 
 
@@ -169,8 +298,8 @@ const Oscuro = document.body.querySelector("#oscuro");
 const header = document.body.querySelector("#cabecera");
 const footer = document.body.querySelector("#Footer");
 const colecciones = document.body.querySelector("#Colecciones");
-const Texto = document.body.querySelector("#Descripcion-Texto");
-
+const Texto = document.body.querySelectorAll(".cajas");
+const precio = document.body.querySelectorAll(".precio");
 
 Oscuro.addEventListener("click", () => {
     if (!document.body.classList.contains("oscuroBody")) {
@@ -178,13 +307,27 @@ Oscuro.addEventListener("click", () => {
         header.classList.add("oscuroHeader");
         footer.classList.add("oscuroHeader");
         colecciones.classList.add("coleccionesOscuro");
-        Texto.classList.add("oscuroTexto");
+
+        for (let i = 0; i < Texto.length; i++) {
+            Texto[i].classList.add("oscuroTexto");
+            precio[i].classList.add("oscuroPrecio");
+            precio[i].classList.remove("precio");
+        }
+
     } else {
         document.body.classList.remove("oscuroBody")
         header.classList.remove("oscuroHeader")
         footer.classList.remove("oscuroHeader");
         colecciones.classList.remove("coleccionesOscuro");
-        Texto.classList.remove("oscuroTexto");
+
+        for (let i = 0; i < Texto.length; i++) {
+            Texto[i].classList.remove("oscuroTexto");
+            precio[i].classList.remove("oscuroPrecio");
+            precio[i].classList.add("precio");
+        }
+
     }
 
 });
+
+

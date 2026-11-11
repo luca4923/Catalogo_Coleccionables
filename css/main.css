@@ -139,6 +139,23 @@ body {
     transition: transform 0.3s ease;
 }
 
+.icono-sol {
+    width: 2vw;
+    height: 2.8vh;
+    cursor: pointer;
+    display: flex;
+
+}
+
+.boton-tema {
+    width: 3vw;
+    height: 3.5vh;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 /*---------------Modo oscuro-----------------*/
 .oscuroHeader{
     background-color: #000000;
@@ -148,6 +165,12 @@ body {
     background-color: #121212;
 }
 
+
+.oscuroPrecio {
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: #039a7c;
+}
 
 /*-------------------------------------Header---------------------------------------*/
 /*-------------------------------------BANER----------------------------------------*/
@@ -177,7 +200,6 @@ body {
 }
 
 .texto-verde {
-
     font-size: 1.7vw;
     color: #03A66A;
 }
@@ -217,6 +239,17 @@ body {
     cursor: pointer;
     border-style: solid;
     box-shadow: 0 2px 4px rgb(0 0 0 / 42%);
+    
+}
+
+.boton-categoria:hover {
+        background-color: #014d23;
+        color: #f7fefc;
+    }
+
+.boton-activo {
+    background-color: #014d23;
+    color: #f7fefc;
 }
 
 

@@ -1,0 +1,221 @@
+.navegacion {
+    margin-right: auto;
+    margin-left: 4.5rem;
+}
+.final-encabezado {
+    background-color: #056C5C;
+    width: 100%;
+    height: 8px;
+}
+
+.contenedor-admin {
+    max-width: 85vw;
+    margin: 2rem auto;
+}
+
+.encabezado-panel {
+    margin-bottom: 1.5rem;
+}
+
+.encabezado-panel h1 {
+    color: #0A4B3E;
+    font-size: 1.8rem;
+    margin: 0.3rem 0;
+}
+
+.subtitulo-panel {
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+.tarjeta-alta {
+    background-color: #f5faf9;
+    border: 1px solid #cfe5e0;
+    border-radius: 8px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    margin-bottom: 2.5rem;
+}
+
+.tarjeta-alta h2 {
+    color: #056C5C;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
+}
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #0A4B3E;
+}
+
+.campo-form input,
+.campo-form select {
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #b8d4ce;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+}
+
+.campo-form input:focus,
+.campo-form select:focus {
+    outline: none;
+    border-color: #03A66A;
+}
+
+.acciones-form {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-alta {
+    background-color: #056C5C;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-alta:hover {
+    background-color: #045a4b;
+}
+
+.mensaje-feedback {
+    color: #03A66A;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    max-width: 90rem;
+    margin: 2.5rem auto;
+}
+
+.tarjetas {
+    flex: 0 1 calc(25% - 1.5rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.6rem;
+    gap: 0.6rem;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+}
+
+.titulo-figura {
+    margin: 0.3rem 0;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.tarjetas p {
+    margin: 0;
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+.tarjetas h3 {
+    margin: 0.2rem 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.btn-editar-item {
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #056C5C;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-editar-item:hover {
+    background-color: #045a4b;
+}
+
+.btn-eliminar-item {
+    margin-top: 0.2rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color: #c9302c;
+    border: 1px solid #c9302c;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-eliminar-item:hover {
+    background-color: #c9302c;
+    color: #ffffff;
+}
+
+.favoritos-carrito {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.btn-vista {
+    background-color: #056C5C;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-vista:hover {
+    background-color: #045a4b;
+}
+
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjetas {
+        width: 100%;
+        max-width: 22rem;
+    }
+}

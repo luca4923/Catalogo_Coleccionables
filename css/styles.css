@@ -27,15 +27,17 @@ body {
 }
 
 .logo {
-    width: 10vw;
-    height: 10vh;
     display: flex;
     justify-content: flex-start;
 }
 
 .log-imagen {
-    width: 12vw;
-    height: 9.5vh;
+    width: auto;
+    height: 3.5rem;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    padding-left: 1.5rem;
 
 }
 
@@ -49,9 +51,14 @@ body {
     width: 20vw;
 }
 
+.enlace {
+    text-decoration: none;
+    color: inherit;
+}
+
 .sub-navegacion {
     font-size: 1.2vw;
-    color: #014d23;
+    color: #056C5C;
     cursor: pointer;
 }
 
@@ -61,34 +68,41 @@ body {
 }
 
 .buscador {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 27rem;
 }
 
 .buscador-input {
-    position: relative;
-    height: 2.5vh;
-    border-radius: 7px;
-    border: none;
-    width: 15vw;
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #ffffff;
 }
 
 .buscador-boton {
     position: absolute;
-    left: 74%;
-    width: 2.0vw;
-    height: 2.6vh;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
     border: none;
-
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.buscador-boton-imagen {
-    width: 2vw;
-    height: 2.6vh;
-    margin: 0px -5px;
-    background: rgba(255, 255, 255, 0);
-
+.buscador-icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: #014d23;
 }
 
 .favoritos-carrito {
@@ -98,9 +112,11 @@ body {
     gap: 1rem;
     padding-right: 0px;
     padding-right: 3vw;
+    height: 100%;
 }
 
 .carrito-imagen {
+    margin-bottom: 5px;
     height: 3vh;
     width: 2vw;
     cursor: pointer;
@@ -181,8 +197,7 @@ body {
 }
 
 .sub_categorias {
-    width: 60vw;
-
+    width: 55.5vw;
 }
 
 .boton-categoria {
@@ -225,7 +240,7 @@ body {
     border-radius: 7px;
     margin-top: 4vh;
     padding: 3vw;
-
+    margin-bottom: 5%;
 }
 
 .figura {
@@ -243,14 +258,14 @@ body {
 
 .precio {
     font-weight: bold;
-    color: #007bff;
+    color: #111111;
     font-size: 1.5vw;
 }
 
 .carrito-boton {
-    width: 1.3vw;
-    height: 1.7vh;
+    width: 14%;
 }
+
 
 .agregar-al-carrito {
     max-width: 100%;
@@ -270,16 +285,16 @@ body {
     align-items: center;
     height: 3.5vh;
     width: 100%;
-    font-size: 1.2vw;
-    color: #f5faf9;
-    background-color: #0A4B3E;
-    border-radius: 15px;
+    font-size: 1vw;
+    color: white;
+    background-color: #056C5C;
+    border-radius: 5px;
     border: none;
 }
 
 .agregar-al-carrito button:hover {
-    background-color: #068355;
-    color: #f5faf9;
+    background-color: #045a4b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
@@ -299,12 +314,23 @@ body {
     width: 20%;
 }
 
+.cajas a {
+    position: relative;
+    display: inline-block;
+}
+
+.figura {
+    display: block;
+}
+
 .figura-corazon {
     position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 2vw;
+    top: 0;
+    left: 0;
+    width: 2.5vw;
 }
+
+
 
 
 
@@ -313,11 +339,13 @@ body {
 .footer {
     display: flex;
     justify-content: end;
-    margin-top: 10%;
+
     background-color: #f0f8f7;
 
     border-top: 1px solid #0A4B3E;
-
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5vw;
 }
 
 .footer-contenido {
@@ -334,16 +362,26 @@ body {
     margin: 2vh
 }
 
+.redes_sociales {
+    width: 180px;
+    height: auto;
+
+
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 .logo-footer {
-    width: 11vw;
-    height: 11vh;
-    margin-top: 2vh;
+    width: 180px;
+    height: auto;
+    object-fit: contain;
 }
 
-.logo-footer-X {
-
-    margin-top: 7vh;
-}
 
 .Derechos {
     display: flex;
@@ -352,10 +390,531 @@ body {
     height: 4vh;
 }
 
+/*-----------------Estilo de tablet------------------*/
+@media (width <=768px) {
+    body {
+        background-color: rgb(246, 252, 253);
+    }
 
-.footer-logo {
+    .log-imagen {
+        width: 21vw;
+        height: 10vh;
+    }
+
+    .navegacion {
+        width: 27vw;
+    }
+
+    .sub-navegacion {
+        font-size: 2.1vw;
+    }
+
+    .favoritos {
+        width: 4vw;
+    }
+
+    .carrito-imagen {
+        height: 3vh;
+        width: 4vw;
+        cursor: pointer;
+    }
+
+    .boton-categoria {
+        font-size: 2.5vw;
+    }
+
+    .texto-verde {
+        font-size: 3.5vw;
+    }
+
+    .colecciones {
+        width: 90vw;
+    }
+
+    .cajas {
+        width: 40vw;
+    }
+
+    .descripcion {
+        font-size: 5vw;
+    }
+
+    .precio {
+        font-size: 5vw;
+    }
+
+    .texto_del_footer {
+        font-size: 2.1vw;
+    }
+
+    .footer {
+        flex-wrap: wrap
+    }
+
+    .logo-footer {
+        width: 23vw;
+    }
+
+    .btn-text {
+        font-size: 2.1vw;
+    }
+
+    .carrito-boton {
+        width: 10%;
+    }
+
+    .figura-corazon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5vw;
+    }
+
+}
+
+/*-----------------Estilo de tablet------------------*/
+/*-----------------Estilo de celular-----------------*/
+
+@media (width <=391px) {
+
+    .texto-banner {
+        position: absolute;
+        top: 12%;
+        left: 2%;
+    }
+
+    .sub-navegacion {
+        font-size: 0vw;
+    }
+
+    .log-imagen {
+        width: 43vw;
+        height: 10vh;
+    }
+
+    .carrito-imagen {
+        height: 0vh;
+        width: 0vw;
+    }
+
+    .favoritos {
+        width: 0vw;
+    }
+
+
+    .colecciones {
+        width: 90vw;
+        gap: 1vh;
+    }
+
+    .cajas {
+        width: 41vw;
+    }
+
+    .descripcion {
+        font-size: 8vw;
+    }
+
+    .precio {
+        font-size: 8vw;
+    }
+
+    .agregar-al-carrito button {
+        height: 2.5vh;
+        width: 60%;
+        justify-content: flex-start
+    }
+
+    .footer-logo {
+        margin-right: 0vw;
+    }
+
+    .logo-footer {
+        width: 40vw;
+    }
+
+    .redes_sociales {
+        width: 32%;
+    }
+
+
+
+}
+
+
+
+
+
+/*---------------------Estilo de celular-----------------*/
+/*---------------------Thiago----------------------------*/
+.body-thiago{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contenedor-mi-cuenta {
     display: flex;
-    justify-content: space-around;
+
+    height: 100%;
+}
+
+
+/*NAV*/
+
+
+.campo-nav {
+
+    width: 27%;
+    background-color: #F2F2F2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-right: 40vw;
+}
+
+.lista-secciones {
+    width: 75%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seleccion {
+    width: 100%;
+    padding: 0.8em 0 0.8em 1em;
+    background-color: #fff;
+    border-left: 2px solid #03A66A;
+}
+
+.secciones {
+    width: 100%;
+    padding: 0.8em 0 0.8em 1em;
+    background-color: #F2F2F2;
+
+}
+
+
+.secciones:hover {
+    background-color: #E1F2EE;
+}
+
+.seleccion:hover {
+    background-color: #E1F2EE;
+}
+
+.enlaces-nav {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+.imagen-nav {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.separador {
+    width: 100%;
+    background-color: #aaa;
+    height: 1px;
+    margin: 16px;
+}
+
+/*mi cuenta*/
+.mi-cuenta {
+    background-color: #fff;
+    width: 73%;
+}
+
+.mini-encabezado {
+    margin: 30px 40px 5px 40px;
+    padding: 10px;
+}
+
+.texto-titulo {
+    font-weight: bold;
+    color: #888;
+}
+
+.cajas-con-sombras {
+    background-color: #F2F2F2;
+    margin: 15px 40px 40px 40px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 90%;
+}
+
+.editar {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    background-color: #056C5C;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color:#eee; 
+    width: 100px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+
+.editar:hover {
+    color: #fff;
+}
+
+.imagen-editar {
+    width: 12px;
+    margin-left: 11px;
+    margin-right: 8px;
+    height: 100%;
+}
+
+/*MIS FAVORITOS*/
+.interfaz-favoritos {
+    display: flex;
+    background-color: #fff;
+}
+
+/*Productos favoritos*/
+.productos-favoritos {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+}
+
+/*sub encabezado*/
+.sub-encabezado {
+    margin: 30px 40px 2px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo-favoritos {
+    font-size: 26px;
+}
+
+.descripcion-cantidad {
+    color: #555;
+    margin: 0 6px;
+    font-size: 13px;
+}
+
+/*cajas favoritos*/
+
+.cajas-favoritos {
+    background-color: #F2F2F2;
+    margin: 22px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 85%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Primera columna*/
+.imagen-producto-favorito {
+    width: 150px;
+    height: 100%;
+}
+
+/*segunda columna*/
+.caja-descripcion {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+
+.descripcion-principal {
+    width: 100%;
+    font-weight: bold;
+}
+
+/*ultima columna de caja*/
+.caja-final {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+}
+
+.eliminar {
+    width: 170px;
+    height: 36px;
+    margin-top: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.eliminar:hover{
+    background-color: #E1F2EE;
+}
+
+.eliminar-img {
+    display: inline;
+    width: 10px;
+}
+
+.agregar-carrito {
+    width: 170px;
+    height: 36px;
+    font-weight: bold;
+    background-color: #056C5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.agregar-carrito:hover {
+    background-color: #045549;
+}
+
+.precio-favoritos {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #056C5C;
+}
+
+.final-encabezado {
+    background-color: #056C5C;
+    width: 100%;
+    height: 8px;
+
+}
+
+
+/*-----------------Estilo de tablet------------------*/
+@media (width <=768px) {
+    body {
+        background-color: rgb(246, 252, 253);
+    }
+
+    .log-imagen {
+        width: 21vw;
+        height: 10vh;
+    }
+
+    .navegacion {
+        width: 27vw;
+    }
+
+    .sub-navegacion {
+        font-size: 2.1vw;
+    }
+
+    .favoritos {
+        width: 4vw;
+    }
+
+    .carrito-imagen {
+        height: 3vh;
+        width: 4vw;
+        cursor: pointer;
+    }
+
+    .boton-categoria {
+        font-size: 2.5vw;
+    }
+
+    .texto-verde {
+        font-size: 3.5vw;
+    }
+
+    .colecciones {
+        width: 90vw;
+    }
+
+    .cajas {
+        width: 40vw;
+    }
+
+    .descripcion {
+        font-size: 5vw;
+    }
+
+    .precio {
+        font-size: 5vw;
+    }
+
+    .texto_del_footer {
+        font-size: 2.1vw;
+    }
+
+    .footer {
+        flex-wrap: wrap
+    }
+
+    .logo-footer {
+        width: 23vw;
+    }
+
+}
+
+/*-----------------Estilo de tablet------------------*/
+/*-----------------Estilo de celular-----------------*/
+
+@media (width <=391px) {
+
+    .texto-banner {
+        position: absolute;
+        top: 12%;
+        left: 2%;
+    }
+
+    .sub-navegacion {
+        font-size: 0vw;
+    }
+
+    .log-imagen {
+        width: 43vw;
+        height: 10vh;
+    }
+
+    .carrito-imagen {
+        height: 0vh;
+        width: 0vw;
+    }
+
+    .favoritos {
+        width: 0vw;
+    }
+
+
+    .colecciones {
+        gap: 3vh;
+    }
+
+    .cajas {
+        width: 80vw;
+    }
+
+    .descripcion {
+        font-size: 16vw;
+    }
+
+    .precio {
+        font-size: 16vw;
+    }
+
+    .footer-logo {
+        margin-right: 0vw;
+    }
+
+    .logo-footer {
+        width: 40vw;
+    }
 }

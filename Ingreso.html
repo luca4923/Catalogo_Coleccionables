@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="proyecto/css/stylesIngreso.css">
-    <title>Acceso</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/stylesIngreso.css">
+  <title>Acceso</title>
 </head>
+
 <body>
   <header class="header-ingreso">
     <img src="imagenes/logoMain.png" alt="Logo de la página" class="logo">
@@ -17,15 +21,13 @@
   <input type="radio" name="pantalla" id="radio-inicio-sesion" class="radio-state">
   <input type="radio" name="pantalla" id="radio-crear-usuario" class="radio-state">
 
-    <!-- Caja de acceso inicial -->
-    <div class="cajaAcceso">
-        <h2>!Bienvenido a Figuras Coleccionables!</h2>
-        <p>Inicia sesión o crea una cuenta para continuar</p>
-        <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
-        <div class="divider">
-            <span>o</span>
-        </div>
-        <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
+  <!-- Caja de acceso inicial -->
+  <div class="cajaAcceso">
+    <h2>!Bienvenido a Figuras Coleccionables!</h2>
+    <p>Inicia sesión o crea una cuenta para continuar</p>
+    <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
+    <div class="divider">
+      <span>o</span>
     </div>
 
   <!--caja de inicio de sesión-->
@@ -51,11 +53,12 @@
     <input id="password-crear" type="password" placeholder="Contraseña" class="input-standard">
     <button id="btn-crear-usuario" type="submit" class="btn-estandar">Crear cuenta</button>
     <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
-</form>
+  </form>
 
   <footer class="footer-ingreso">
     <p>&copy; 2026 Figuras Coleccionables - PW1-2026</p>
   </footer>
   <script src="js/scriptIngreso.js"></script>
 </body>
+
 </html>

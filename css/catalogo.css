@@ -1,0 +1,234 @@
+/*margen catalogo*/
+.catalogo_margen {
+    width: 100%;
+}
+
+.contenedor-imagen {
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.margen_imagen {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.imagen {
+    width: 100%;
+    max-width: 100%;
+    height: auto;     
+}
+
+.descripcion {
+    flex: 1 1 50%;
+    min-width: 0; 
+}
+
+.marca {
+    margin-top: 0.35rem;
+}
+.titulo {
+    margin-bottom: 0.6rem;
+}
+
+.precio {
+    margin: 1.25rem 0 0.6rem 0;
+    color: #000000;
+    font-weight: bold;
+}
+
+/*BOTONES*/
+.boton {
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 0.85rem 1.75rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    background-color: #056C5C;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 0.6rem;
+}
+
+.boton:hover {
+    background-color: #045549;
+}
+
+.boton:active {
+    transform: scale(0.90);
+}
+
+.boton_carrito {
+    width: 100%;
+    border: 2px solid #000;
+    color: #333;
+    padding: 0.85rem 1.75rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.boton_carrito:hover {
+    color: #000;
+    background-color:#E1F2EE;
+}
+
+.boton_carrito:active {
+    transform: scale(0.90);
+}
+.productos .enlace{
+    flex: 1;
+    text-decoration: none;
+    color:inherit;
+}
+
+.lista-despegable {
+    margin-top: 10px;
+    padding: 1.25rem 0 0.6rem;
+    border-top: 1px solid #CCC;
+}
+
+.detalles-lista {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenido-lista {
+    padding: 0.6rem 0;
+}
+
+.titulo-lista {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenido-lista p {
+    margin: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+/*Sección de recomendados*/
+
+.seccion-recomendados {
+    max-width: 90rem;
+    margin: 3.75rem auto;
+    padding: 0 1.25rem;
+}
+
+.titulo-recomendado {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.6rem;
+    gap: 0.6rem;
+    height: 100%;
+}
+
+.tarjetas img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+}
+
+.titulo-figura {
+    margin: 0.3rem 0;
+}
+
+.precio-figura {
+    margin-bottom: 0.6rem;
+}
+
+/* Media Queries */
+/* Estilos para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+
+    .contenedor-imagen {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .margen_imagen,
+    .descripcion {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.60rem;
+    }
+    
+    .marca{
+        font-size: 1.50rem;
+    }
+
+    .precio {
+        font-size: 2rem;
+    }
+
+    .boton {
+        font-size: 1.5rem;
+        padding: 0.50rem;
+    }
+
+    .boton_carrito {
+        font-size: 1.5rem;
+        padding: 0.50rem;
+    }
+    
+    .lista-despegable {
+        font-size: 1rem;
+    }
+    
+    .titulo-recomendado {
+        font-size: 1.5rem;
+    }
+
+    .seccion-recomendados {
+        padding: 0rem;
+    }
+
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 0.6rem;
+        max-width: auto;   
+    }
+}

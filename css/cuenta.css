@@ -1,0 +1,475 @@
+* {
+    margin: 0px;
+
+}
+
+body {
+    font-family: Ubuntu, Helvetica, sans-serif;
+    background: hsl(165, 36%, 96%);
+}
+
+
+/*Header*/
+.cabecera {
+    background-color: #f5faf9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 8vh;
+
+}
+
+.cabecera .font {
+    color: #f5faf9;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.log-imagen {
+    width: auto;
+    height: 3.5rem;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    padding-left: 1.5rem;
+
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 0 0 14%;
+    height: 10vh;
+    width: 20vw;
+}
+
+.enlace {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sub-navegacion {
+    font-size: 1.2vw;
+    color: #056C5C;
+    cursor: pointer;
+}
+
+.sub-navegacion:hover {
+    color: #03A66A;
+    border-bottom: 2px solid #03A66A;
+}
+
+.buscador {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 27rem;
+    padding-left: 13%;
+}
+
+.buscador-input {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.buscador-boton {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscador-icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: #014d23;
+}
+
+.favoritos-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 10%;
+}
+
+.carrito-imagen {
+    margin-bottom: 5px;
+    height: 3vh;
+    width: 2vw;
+    cursor: pointer;
+}
+
+.carrito-imagen:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.favoritos {
+    width: 2vw;
+    height: 2.8vh;
+    cursor: pointer;
+}
+
+.favoritos:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+/*-------------------------------------Header---------------------------------------*/
+
+
+
+
+
+/*footer*/
+
+.footer {
+    display: flex;
+    justify-content: end;
+
+    background-color: #f0f8f7;
+
+    border-top: 1px solid #0A4B3E;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5vw;
+}
+
+.footer-contenido {
+    display: flex;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    gap: 5vw;
+}
+
+.texto_del_footer {
+    color: #0A4B3E;
+    font-size: 1vw;
+    margin: 2vh
+}
+
+.redes_sociales {
+    width: 180px;
+    height: auto;
+
+
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-footer {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.Derechos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4vh;
+}
+/*---------------------Thiago----------------------------*/
+.body-thiago{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contenedor-mi-cuenta {
+    display: flex;
+
+    height: 100%;
+}
+
+
+/*NAV*/
+
+
+.campo-nav {
+
+    width: 27%;
+    background-color: #F2F2F2;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-secciones {
+    width: 75%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.seleccion {
+    width: 100%;
+    padding: 0.8em 0 0.8em 1em;
+    background-color: #fff;
+    border-left: 2px solid #03A66A;
+}
+
+.secciones {
+    width: 100%;
+    padding: 0.8em 0 0.8em 1em;
+    background-color: #F2F2F2;
+
+}
+
+
+.secciones:hover {
+    background-color: #E1F2EE;
+}
+
+.seleccion:hover {
+    background-color: #E1F2EE;
+}
+
+.enlaces-nav {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000;
+    font-weight: bold;
+    font-size: 1em;
+
+
+}
+
+.imagen-nav {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.separador {
+    width: 100%;
+    background-color: #aaa;
+    height: 1px;
+    margin: 16px;
+}
+
+/*mi cuenta*/
+.mi-cuenta {
+    background-color: #fff;
+    width: 73%;
+}
+
+.mini-encabezado {
+    margin: 30px 40px 5px 40px;
+    padding: 10px;
+}
+.titulo-mi-cuenta{
+        color: #056C5C;
+}
+.subtitulo{
+        color: #056C5C;
+}
+.texto-titulo {
+    font-weight: bold;
+    color: #888;
+}
+
+.cajas-con-sombras {
+    background-color: #F2F2F2;
+    margin: 15px 40px 40px 40px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imagen-caja{
+    width: 10%;
+    display: inline-block;
+    
+}
+.separador-caja{
+    width: 2px;
+    background-color: #056C5C;
+    height: 120px;
+    margin: 0 16px;
+}
+.editar {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    background-color: #056C5C;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    color:#eee; 
+    width: 100px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+
+.editar:hover {
+    color: #fff;
+}
+
+.imagen-editar {
+    width: 12px;
+    margin-left: 11px;
+    margin-right: 8px;
+    height: 100%;
+}
+
+/*MIS FAVORITOS*/
+.interfaz-favoritos {
+    display: flex;
+    background-color: #fff;
+}
+
+/*Productos favoritos*/
+.productos-favoritos {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+}
+
+/*sub encabezado*/
+.sub-encabezado {
+    margin: 30px 40px 2px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo-favoritos {
+    font-size: 26px;
+}
+
+.descripcion-cantidad {
+    color: #555;
+    margin: 0 6px;
+    font-size: 13px;
+}
+
+/*cajas favoritos*/
+
+.cajas-favoritos {
+    background-color: #F2F2F2;
+    margin: 22px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 85%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Primera columna*/
+.imagen-producto-favorito {
+    width: 150px;
+    height: 100%;
+}
+
+/*segunda columna*/
+.caja-descripcion {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+
+.descripcion-principal {
+    width: 100%;
+    font-weight: bold;
+}
+
+/*ultima columna de caja*/
+.caja-final {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+}
+
+.eliminar {
+    width: 170px;
+    height: 36px;
+    margin-top: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.eliminar:hover{
+    background-color: #E1F2EE;
+}
+
+.eliminar-img {
+    display: inline;
+    width: 10px;
+}
+
+.agregar-carrito {
+    width: 170px;
+    height: 36px;
+    font-weight: bold;
+    background-color: #056C5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.agregar-carrito:hover {
+    background-color: #045549;
+}
+
+.precio-favoritos {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #056C5C;
+}
+
+.final-encabezado {
+    background-color: #056C5C;
+    width: 100%;
+    height: 8px;
+
+}
+
+

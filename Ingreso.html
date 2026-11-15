@@ -10,12 +10,12 @@
     <title>Acceso</title>
 </head>
 <body>
-    <header class="header-ingreso">
-        <img src="proyecto/fotos/logo.png" alt="Logo de la página" class="logo">
-    </header>
-    <!-- Checkbox oculto que guardará el estado (marcado / no marcado) -->
-    <input type="radio" name="pantalla" id="radio-inicio-sesion" class="radio-state">
-    <input type="radio" name="pantalla" id="radio-crear-usuario" class="radio-state">
+  <header class="header-ingreso">
+    <img src="imagenes/logoMain.png" alt="Logo de la página" class="logo">
+  </header>
+  <!-- Checkbox oculto que guardará el estado (marcado / no marcado) -->
+  <input type="radio" name="pantalla" id="radio-inicio-sesion" class="radio-state">
+  <input type="radio" name="pantalla" id="radio-crear-usuario" class="radio-state">
 
     <!-- Caja de acceso inicial -->
     <div class="cajaAcceso">
@@ -28,33 +28,34 @@
         <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
     </div>
 
-<!--caja de inicio de sesión-->
-<form action="main.html" method="get" class="cajaInicioSesion">
-  <h2>Iniciar Sesión</h2>
-  <div class="acceso-rapido">
-    <scan class="acceso-rapido-texto">Acceso rápido:</scan>
-    <button type="submit" class="btn-acceso-rapido">Admin</button>
-    <button type="submit" class="btn-acceso-rapido">Usuario</button>
-  </div>
+  <!--caja de inicio de sesión-->
+  <form id="form-inicio-sesion" action="main.html" method="get" class="cajaInicioSesion">
+    <h2>Iniciar Sesión</h2>
+    <div class="acceso-rapido">
+      <scan class="acceso-rapido-texto">Acceso rápido:</scan>
+      <button type="button" class="btn-acceso-rapido">Admin</button>
+      <button type="button" class="btn-acceso-rapido">Usuario</button>
+    </div>
 
-  <input type="email" placeholder="Correo electrónico" class="input-standard">
-  <input type="password" placeholder="Contraseña" class="input-standard">
-  <button type="submit" class="btn-estandar">Ingresar</button>
-  <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
-</form>
+    <input id="email" type="email" placeholder="Correo electrónico" class="input-standard">
+    <input id="password" type="password" placeholder="Contraseña" class="input-standard">
+    <button id="btn-iniciar-sesion" type="submit" class="btn-estandar">Ingresar</button>
+    <label for="radio-crear-usuario" class="btn-estandar">Crear cuenta</label>
+  </form>
 
-<!--caja de crear usuario-->
-<form action="main.html" method="get" class="cajaCrearUsuario">
-  <h2>Crear Cuenta</h2>
-    <input type="text" placeholder="Nombre completo" class="input-standard">
-    <input type="email" placeholder="Correo electrónico" class="input-standard">
-    <input type="password" placeholder="Contraseña" class="input-standard">
-    <button type="submit" class="btn-estandar">Crear cuenta</button>
+  <!--caja de crear usuario-->
+  <form id="form-crear-usuario" action="main.html" method="get" class="cajaCrearUsuario">
+    <h2>Crear Cuenta</h2>
+    <input id="nombre-completo" type="text" placeholder="Nombre completo" class="input-standard">
+    <input id="email-crear" type="email" placeholder="Correo electrónico" class="input-standard">
+    <input id="password-crear" type="password" placeholder="Contraseña" class="input-standard">
+    <button id="btn-crear-usuario" type="submit" class="btn-estandar">Crear cuenta</button>
     <label for="radio-inicio-sesion" class="btn-estandar">Iniciar sesión</label>
 </form>
 
-    <footer class="footer-ingreso">
-  <p>&copy; 2026 Figuras Coleccionables - PW1-2026</p>
-</footer>
+  <footer class="footer-ingreso">
+    <p>&copy; 2026 Figuras Coleccionables - PW1-2026</p>
+  </footer>
+  <script src="js/scriptIngreso.js"></script>
 </body>
 </html>

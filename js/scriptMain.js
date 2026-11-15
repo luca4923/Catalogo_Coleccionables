@@ -291,6 +291,10 @@ function removerTarjetas(String) {
 }
 
 
+window.addEventListener("load", () => {
+  console.log("La página cargó completamente");
+});
+
 
 /*Modo oscuro*/
 

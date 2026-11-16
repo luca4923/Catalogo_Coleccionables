@@ -73,6 +73,81 @@ body{
   border-radius: 5px;
 }
 
+/* Ajustes para pantallas de celular */
+@media (max-width: 480px) {
+  .header-ingreso {
+    height: 75px;
+  }
+
+  .logo {
+    max-height: 70px;
+  }
+
+  .cajaAcceso, .cajaInicioSesion, .cajaCrearUsuario {
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0; 
+    padding: 20px 15px;
+    border-radius: 0;
+    box-shadow: none; 
+    background-color: transparent;
+  }
+
+  .acceso-rapido {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .acceso-rapido-texto {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .btn-acceso-rapido {
+    margin-right: 0;
+  }
+}
+
+
+/* Estilos para la lista de requisitos de contraseña*/
+.lista-requisitos {
+  display: none; /* Oculto hasta que escriba */
+  font-size: 0.8rem;
+  list-style: none;
+  padding-left: 5px;
+  margin: 4px 0 10px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.lista-requisitos.visible {
+  display: block;
+}
+
+.lista-requisitos li {
+  list-style: none;
+  margin: 2px 0;
+}
+
+.requisito-invalido {
+  color: #d93025;
+}
+
+.requisito-valido {
+  color: #188038;
+}
+
+.mensaje-error {
+  color: #d93025;
+  font-size: 0.85rem;
+  margin: 4px 0 8px 0;
+  min-height: 18px; /* Reserva el espacio para que no salte el diseño */
+  text-align: center;
+}
+
 
 /* Botones y funcionamiento */
 .btn-estandar {
@@ -96,6 +171,7 @@ body{
   margin-right: 10px;
 }
 
+
 .btn-acceso-rapido:hover {
   background-color: #f0f0f0; 
 }
@@ -105,30 +181,9 @@ body{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.radio-state {
-  display: none;
+.oculto {
+  display: none !important;
 }
-
-.cajaInicioSesion, .cajaCrearUsuario {
-  display: none;
-}
-
-#radio-inicio-sesion:checked ~ .cajaAcceso {
-  display: none;
-}
-
-#radio-inicio-sesion:checked ~ .cajaInicioSesion {
-  display: flex;
-}
-
-#radio-crear-usuario:checked ~ .cajaAcceso {
-  display: none;
-}
-
-#radio-crear-usuario:checked ~ .cajaCrearUsuario {
-  display: flex;
-}
-
 
 .divider {
   display: flex;

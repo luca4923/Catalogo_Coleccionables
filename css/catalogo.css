@@ -35,12 +35,14 @@
 }
 .titulo {
     margin-bottom: 0.6rem;
+    color: #056C5C;
 }
 
 .precio {
     margin: 1.25rem 0 0.6rem 0;
     color: #000000;
     font-weight: bold;
+    color: #056C5C;
 }
 
 /*BOTONES*/
@@ -147,7 +149,7 @@
 
 .tarjetas p {
     margin: 0;
-    color: #333333;
+    color: #056C5C;
     font-size: 0.9rem;
 }
 
@@ -232,4 +234,19 @@
         gap: 0.6rem;
         max-width: auto;   
     }
+}
+/*      MODO OSCURO     */
+.body-oscuro{
+background-color: #121212;
+color: #fff;
+}
+.boton-carrito-oscuro{
+    background-color: #121212;
+    color: #fff;
+    border-color: #056C5C;
+}
+.boton-carrito-oscuro:hover{
+        background-color: #032e27;
+        color: #fff;
+
 }

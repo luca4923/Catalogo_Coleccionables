@@ -3,6 +3,7 @@
 let modoOscuro = localStorage.getItem("modo-oscuro")=="true";
 let iconoTema = document.querySelector(".imagen-modo")
 
+const body = document.body;
 const Oscuro = document.querySelector("#oscuro");
 const colecciones = document.querySelector("#Colecciones");
 const btnCambiarVista = document.querySelector("#btn-cambiar-vista");
@@ -20,10 +21,21 @@ const footer = document.querySelector(".footer");
 const textosFooter = document.querySelectorAll(".texto_del_footer"); // 2
 
 
+
+
 let categoriaActual = "Todas";
 
-// modo oscuro
+//       modo oscuro
+
 Oscuro.addEventListener("click", () => {
+
+    //Textos
+const descripcion = document.querySelectorAll(".descripcion");
+const detalleItem = document.querySelectorAll(".detalle-item")
+const precio = document.querySelectorAll(".precio")
+
+
+
     modoOscuro=!modoOscuro;
     localStorage.setItem("modo-oscuro",modoOscuro)
 
@@ -36,6 +48,26 @@ Oscuro.addEventListener("click", () => {
         
         colecciones.classList.remove("coleccionesOscuro");
     }
+
+
+    // Body
+        body.classList.toggle("body-oscuro")
+        botonesCategoria.forEach(boton =>{
+            boton.classList.toggle("botones-oscuro")
+        })
+    // Tarjetas textos
+    descripcion.forEach(descripcion =>{
+        descripcion.classList.toggle("descripcion-oscuro")
+    })
+    detalleItem.forEach(detalle => {
+        detalle.classList.toggle("detalle-item-oscuro")
+    })
+    precio.forEach(precio => {
+        precio.classList.toggle("precio-oscuro")
+    })
+
+
+
     // Header
     cabecera.classList.toggle("cabecera-oscuro");
     subNav[0].classList.toggle("sub-navegacion-oscuro");
@@ -105,6 +137,7 @@ for (let i = 0; i < botonesCategoria.length; i++) {
         categoriaActual = botonesCategoria[i].getAttribute("data-categoria");
         renderizarProductos();
     });
+
 }
 
 renderizarProductos();

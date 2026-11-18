@@ -183,7 +183,7 @@ body {
 .texto-verde {
 
     font-size: 1.7vw;
-    color: #03A66A;
+    color: #056C5C;
 }
 
 .texto-blanco {
@@ -233,6 +233,7 @@ body {
     max-width: 90rem;
     width: 85vw;
     margin: 2.5rem auto 5%;
+    padding: 40px 0 20px 40px;
 }
 
 .cajas {
@@ -296,11 +297,6 @@ body {
     font-size: 1.15rem;
 }
 
-/*---------------Modo oscuro-----------------*/
-
-.coleccionesOscuro{
-    background-color: #f20707;
-}
 
 
 /*footer*/
@@ -575,6 +571,54 @@ body {
 /*---------------------Estilo de celular-----------------*/
 /* ================= MODO OSCURO ================= */
 
+
+.coleccionesOscuro{
+    background-color: #1e1e1e;
+}
+.descripcion-oscuro{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.3rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #056C5C;
+}
+.precio-oscuro{
+    margin: 0.2rem 0;
+    text-transform: none;
+    font-weight: bold;
+    color: #056C5C;
+    font-size: 1.15rem;
+}
+.detalle-item-oscuro{
+    margin: 0.3rem 0 0 0;
+    text-transform: none;
+    font-weight: normal;
+    color: #4fd1b5;
+    font-size: 0.9rem;
+}
+.botones-oscuro{
+    background-color: #1e1e1e;
+    color: #056C5C;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5% 1%;
+    font-size: 1vw;
+    cursor: pointer;
+    border-style: solid;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 42%);
+}
+
+/*      body      */
+.body-oscuro{
+    font-family: Ubuntu, Helvetica, sans-serif;
+    background-color: #121212;
+}
 /* Header */
 .cabecera-oscuro {
     background-color: #1e1e1e;

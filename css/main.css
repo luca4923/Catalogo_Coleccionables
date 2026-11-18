@@ -14,10 +14,10 @@ body {
     background-color: #f5faf9;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 8vh;
-
+    position: relative; 
 }
 
 .cabecera .font {
@@ -46,7 +46,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding-right: 0px;
+    padding-left:70px;
     height: 10vh;
     width: 20vw;
 }
@@ -54,6 +54,8 @@ body {
 .enlace {
     text-decoration: none;
     color: inherit;
+    width: 200px;
+    text-align: center;
 }
 
 .sub-navegacion {
@@ -73,6 +75,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 27rem;
+    padding-left: 13%;
 }
 
 .buscador-input {
@@ -107,12 +110,9 @@ body {
 
 .favoritos-carrito {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding-right: 0px;
-    padding-right: 3vw;
     height: 100%;
+    margin-left: 20%;
 }
 
 .carrito-imagen {
@@ -139,35 +139,17 @@ body {
     transition: transform 0.3s ease;
 }
 
-.btn-vista {
-    background-color: #056C5C;
-    color: #ffffff;
+.modo-oscuro-boton{
+    margin-left: 30px ;
+    width: 85px;
+    background:none;
     border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    font-family: inherit;
-    font-size: 0.9rem;
-    font-weight: bold;
-    white-space: nowrap;
-    cursor: pointer;
+}
+.imagen-modo{
+    width: 100%;
 }
 
-.btn-vista:hover {
-    background-color: #045a4b;
-}
 
-.oculto {
-    display: none;
-}
-
-/*---------------Modo oscuro-----------------*/
-.oscuroHeader{
-    background-color: #000000;
-}
-
-.oscuroBody{
-    background-color: #121212;
-}
 
 
 
@@ -591,3 +573,26 @@ body {
 
 
 /*---------------------Estilo de celular-----------------*/
+/* ================= MODO OSCURO ================= */
+
+/* Header */
+.cabecera-oscuro {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.buscador-input-oscuro {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Footer */
+.footer-oscuro {
+    background-color: #1e1e1e;
+    border-top: 1px solid #4fd1b5;
+}
+
+.texto-footer-oscuro {
+    color: #4fd1b5;
+}

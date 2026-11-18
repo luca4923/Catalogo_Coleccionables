@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="48" viewBox="0 0 96 48" role="img" aria-label="Activar modo claro">
+  <title>Botón de modo claro</title>
+  <defs>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--toggle-track, #056C5C)"/><stop offset="1" stop-color="var(--toggle-track-dark, #03483E)"/></linearGradient>
+    <linearGradient id="knob" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--toggle-knob, #078A75)"/><stop offset="1" stop-color="var(--toggle-knob-dark, #04584D)"/></linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="93" height="45" rx="22.5" fill="url(#track)" stroke="var(--toggle-border, #278778)" stroke-width="1.5"/>
+  <circle cx="25" cy="24" r="19.5" fill="url(#knob)" stroke="var(--toggle-knob-border, #3A9B8D)" stroke-width="1.2"/>
+  <circle cx="25" cy="24" r="7" fill="var(--toggle-icon, #FFFFFF)"/>
+  <g fill="var(--toggle-icon, #FFFFFF)">
+    <path d="M23.5 9h3l-1.5 6Z"/><path d="M23.5 39h3L25 33Z"/><path d="M10 22.5v3l6-1.5Z"/><path d="M40 22.5v3l-6-1.5Z"/>
+    <path d="M14 12l2.1-2.1 2.4 5.9Z"/><path d="M36 36l2.1-2.1-5.9-2.4Z"/><path d="M14 36l-2.1-2.1 5.9-2.4Z"/><path d="M36 12l2.1 2.1-5.9 2.4Z"/>
+  </g>
+</svg>

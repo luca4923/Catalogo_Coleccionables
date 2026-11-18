@@ -1,24 +1,61 @@
+
+
+let modoOscuro = localStorage.getItem("modo-oscuro")=="true";
+let iconoTema = document.querySelector(".imagen-modo")
+
 const Oscuro = document.querySelector("#oscuro");
-const header = document.querySelector("#cabecera");
-const footer = document.querySelector("#Footer");
 const colecciones = document.querySelector("#Colecciones");
 const btnCambiarVista = document.querySelector("#btn-cambiar-vista");
 const botonesCategoria = document.querySelectorAll(".boton-categoria");
+
+    // Header
+const cabecera = document.querySelector(".cabecera");
+const subNav = document.querySelectorAll(".sub-navegacion"); // 3
+const buscadorInput = document.querySelector(".buscador-input");
+const iconoBuscador = document.querySelector(".buscador-icono");
+const iconoFavoritos = document.querySelector(".favoritos");
+const iconoCarrito = document.querySelector(".carrito-imagen");
+// Footer
+const footer = document.querySelector(".footer");
+const textosFooter = document.querySelectorAll(".texto_del_footer"); // 2
+
 
 let categoriaActual = "Todas";
 
 // modo oscuro
 Oscuro.addEventListener("click", () => {
+    modoOscuro=!modoOscuro;
+    localStorage.setItem("modo-oscuro",modoOscuro)
+
     if (!document.body.classList.contains("oscuroBody")) {
         document.body.classList.add("oscuroBody");
-        header.classList.add("oscuroHeader");
-        footer.classList.add("oscuroHeader");
+
         colecciones.classList.add("coleccionesOscuro");
     }else{
         document.body.classList.remove("oscuroBody")
-        header.classList.remove("oscuroHeader")
-        footer.classList.remove("oscuroHeader");
+        
         colecciones.classList.remove("coleccionesOscuro");
+    }
+    // Header
+    cabecera.classList.toggle("cabecera-oscuro");
+    subNav[0].classList.toggle("sub-navegacion-oscuro");
+    subNav[1].classList.toggle("sub-navegacion-oscuro");
+    subNav[2].classList.toggle("sub-navegacion-oscuro");
+    buscadorInput.classList.toggle("buscador-input-oscuro");
+    iconoBuscador.classList.toggle("icono-oscuro");
+    iconoFavoritos.classList.toggle("icono-oscuro");
+    iconoCarrito.classList.toggle("icono-oscuro");
+
+        // Footer
+    footer.classList.toggle("footer-oscuro");
+    textosFooter.forEach(texto => {
+        texto.classList.toggle("texto-footer-oscuro");
+})
+
+    if (modoOscuro) {
+        iconoTema.src = "imagenes/modo-oscuro.png";
+    } else {
+        iconoTema.src = "imagenes/modo-dia.png";
     }
 
 });
@@ -71,3 +108,7 @@ for (let i = 0; i < botonesCategoria.length; i++) {
 }
 
 renderizarProductos();
+if (modoOscuro) {
+    modoOscuro = false;
+    Oscuro.click();
+}

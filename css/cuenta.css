@@ -203,91 +203,8 @@ body {
     font-size: 13px;
 }
 
-/*cajas favoritos*/
-
-.cajas-favoritos {
-    background-color: #F2F2F2;
-    margin: 22px;
-    padding: 20px;
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #777;
-    width: 85%;
-    height: 150px;
-    display: flex;
-    flex-direction: row;
-}
-
-/*Primera columna*/
-.imagen-producto-favorito {
-    width: 150px;
-    height: 100%;
-}
-
-/*segunda columna*/
-.caja-descripcion {
-    display: flex;
-    flex-direction: column;
-    margin: 8px;
-}
 
 
-.descripcion-principal {
-    width: 100%;
-    font-weight: bold;
-}
-
-/*ultima columna de caja*/
-.caja-final {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-left: auto;
-}
-
-.eliminar {
-    width: 170px;
-    height: 36px;
-    margin-top: 5px;
-    border: 2px solid #000;
-    border-radius: 5px;
-}
-.eliminar:hover{
-    background-color: #E1F2EE;
-}
-
-.eliminar-img {
-    display: inline;
-    width: 10px;
-}
-
-.agregar-carrito {
-    width: 170px;
-    height: 36px;
-    font-weight: bold;
-    background-color: #056C5C;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-.agregar-carrito:hover {
-    background-color: #045549;
-}
-
-.precio-favoritos {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 12px 0;
-    color: #056C5C;
-}
-
-.final-encabezado {
-    background-color: #056C5C;
-    width: 100%;
-    height: 8px;
-
-}
 
 
 /* ================= MODO OSCURO ================= */
@@ -337,6 +254,18 @@ body {
 }
 
 
+
+
+
+/* Footer */
+.footer-oscuro {
+    background-color: #1e1e1e;
+    border-top: 1px solid #4fd1b5;
+}
+
+.texto-footer-oscuro {
+    color: #4fd1b5;
+}
 /* Tarjetas */
 .tarjeta-oscuro {
     background-color: #1e1e1e;
@@ -350,16 +279,4 @@ body {
 }
 .eliminar-oscuro:hover{
     background-color: #0A4B3E;
-}
-
-
-
-/* Footer */
-.footer-oscuro {
-    background-color: #1e1e1e;
-    border-top: 1px solid #4fd1b5;
-}
-
-.texto-footer-oscuro {
-    color: #4fd1b5;
 }

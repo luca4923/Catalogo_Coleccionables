@@ -17,14 +17,16 @@ const enlacesNav = document.querySelectorAll(".enlaces-nav");
 
 // Mis favoritos
 const interfazFavoritos = document.querySelectorAll(".interfaz-favoritos");
-const tarjetas = document.querySelectorAll(".cajas-favoritos");
+const tarjetas = document.querySelectorAll(".tarjeta-producto");
 const botonesEliminar = document.querySelectorAll(".eliminar");
 
 // Mi Cuenta
 const miCuenta = document.querySelector(".mi-cuenta");
 const tituloMiCuenta = document.querySelector(".titulo-mi-cuenta");
 const tarjetasCuenta = document.querySelectorAll(".cajas-con-sombras");
-
+// Carrito
+    const carritoCompleto = document.querySelector(".carrito")
+    const bodyCarrito = document.querySelector(".body-carrito")
 // Catalogo
     const carrito = document.querySelector(".boton_carrito")
 
@@ -51,7 +53,7 @@ boton.addEventListener("click", function () {
 
     // Mis favoritos
     interfazFavoritos.forEach(function (el) { el.classList.toggle("interfaz-favoritos-oscuro"); });
-    tarjetas.forEach(function (el) { el.classList.toggle("tarjeta-oscuro"); });
+    tarjetas.forEach(function (el) { el.classList.toggle("tarjeta-producto-oscuro"); });
     botonesEliminar.forEach(function (el) { el.classList.toggle("eliminar-oscuro"); });
 
     // Mi cuenta
@@ -60,6 +62,9 @@ boton.addEventListener("click", function () {
     tarjetasCuenta.forEach(function (tarjeta) {
         tarjeta.classList.toggle("tarjeta-oscuro");
     });
+    // Carrito
+    if (carritoCompleto){ carritoCompleto.classList.toggle("carrito-oscuro")}
+    if (bodyCarrito){ carritoCompleto.classList.toggle("body-carrito-oscuro")}
 
     // Catalogo
     if (carrito){carrito.classList.toggle("boton-carrito-oscuro")}

@@ -6,8 +6,18 @@
 body {
     font-family: Ubuntu, Helvetica, sans-serif;
     background: hsl(165, 36%, 96%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/*  Textos  */
+.titulo{
+    color: #056C5C;
+}
+.subtitulo{
+    color: #056C5C;
+}
 
 /*Header*/
 .cabecera {
@@ -148,7 +158,12 @@ body {
 .imagen-modo{
     width: 100%;
 }
+.final-encabezado {
+    background-color: #056C5C;
+    width: 100%;
+    height: 8px;
 
+}
 
 
 
@@ -351,7 +366,7 @@ body {
 .footer {
     display: flex;
     justify-content: end;
-
+    margin-top: auto;
     background-color: #f0f8f7;
 
     border-top: 1px solid #0A4B3E;
@@ -684,7 +699,11 @@ body {
     }
 }
 /* ================= MODO OSCURO ================= */
-
+/*BODY*/
+.body-oscuro{
+background-color: #121212;
+color: #fff;
+}
 /* Header */
 .cabecera-oscuro {
     background-color: #1e1e1e;
@@ -755,4 +774,105 @@ body {
 
 .texto-footer-oscuro {
     color: #4fd1b5;
+}
+/*      Tarjeta producto    */
+
+.tarjeta-producto {
+    background-color: #F2F2F2;
+    margin: 22px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 85%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Primera columna*/
+.imagen-producto {
+    width: 150px;
+    height: 100%;
+}
+
+/*segunda columna*/
+.caja-descripcion {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+.descripcion-principal {
+    width: 100%;
+    font-weight: bold;
+    color: #056C5C;
+}
+.descripcion-extra{
+    font-size: 14px;
+    padding-top:6px ;
+}
+
+/*ultima columna de caja*/
+.caja-final {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-left: auto;
+}
+
+.eliminar {
+    width: 170px;
+    height: 36px;
+    margin-top: 5px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.eliminar:hover{
+    background-color: #E1F2EE;
+}
+
+.eliminar-img {
+    display: inline;
+    width: 10px;
+}
+
+.agregar-carrito {
+    width: 170px;
+    height: 36px;
+    font-weight: bold;
+    background-color: #056C5C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.agregar-carrito:hover {
+    background-color: #045549;
+}
+
+.precio-tarjeta {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #056C5C;
+}
+/*FIN TARJETAS*/
+
+/*      MODO OSCURO GENERAL     */
+    /* Tarjetas */
+.tarjeta-producto-oscuro {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px #000;
+    color: #fff;
+}
+.eliminar-oscuro {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #056C5C;
+}
+.eliminar-oscuro:hover{
+    background-color: #0A4B3E;
 }

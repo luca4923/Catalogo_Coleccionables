@@ -96,32 +96,7 @@ for (let i = 0; i < botonesCategoria.length; i++) {
     });
 }
 
-// Modo oscuro
-const btnOscuro = document.querySelector("#oscuro");
-const iconoTema = document.querySelector(".imagen-modo");
-const cabecera = document.querySelector("#cabecera");
-const footer = document.querySelector("#Footer");
 
-if (localStorage.getItem("modo-oscuro") === "true") {
-    document.body.classList.add("body-oscuro");
-    cabecera.classList.add("cabecera-oscuro");
-    footer.classList.add("footer-oscuro");
-    iconoTema.src = "imagenes/modo-oscuro.png";
-}
 
-btnOscuro.addEventListener("click", () => {
-    document.body.classList.toggle("body-oscuro");
-    cabecera.classList.toggle("cabecera-oscuro");
-    footer.classList.toggle("footer-oscuro");
-
-    const estaOscuro = document.body.classList.contains("body-oscuro");
-    localStorage.setItem("modo-oscuro", estaOscuro);
-
-    if (estaOscuro) {
-        iconoTema.src = "imagenes/modo-oscuro.png";
-    } else {
-        iconoTema.src = "imagenes/modo-dia.png";
-    }
-});
 
 renderizarCatalogo();

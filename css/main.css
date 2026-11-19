@@ -250,6 +250,9 @@ body {
 }
 
 .btn-tipo-vista.activa {
+    
+}
+.boton-categoria.activa {
     background-color: #056C5C;
     color: #ffffff;
 }
@@ -392,6 +395,11 @@ body.body-oscuro .Derechos {
     font-size: 1.15rem;
 }
 
+/*---------------Modo oscuro-----------------*/
+
+.coleccionesOscuro{
+    background-color: #2a2a2b;
+}
 
 
 /*footer*/

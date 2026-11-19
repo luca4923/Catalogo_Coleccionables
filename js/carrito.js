@@ -6,7 +6,7 @@ carritoSuperposicion.innerHTML = `
             <h2>MI CARRITO <span class="carrito-contador">0</span></h2>
             <button type="button" class="carrito-cerrar" aria-label="Cerrar carrito">&times;</button>
         </div>
-        <div class="carrito-envio">🚚 Tenes envío gratis</div>
+        <div class="carrito-envio">Tenes envío gratis</div>
         <div class="carrito-lista"></div>
         <button type="button" class="carrito-vaciar">Vaciar carrito</button>
         <div class="carrito-pie">

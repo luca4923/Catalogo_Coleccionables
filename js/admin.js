@@ -38,11 +38,27 @@ function renderizarCatalogo() {
             <button type="button" class="btn-editar-item">Editar</button>
             <button type="button" class="btn-eliminar-item">Eliminar figura</button>
         `;
-
+        const btnEliminar = tarjeta.querySelector(".btn-eliminar-item");
+        btnEliminar.addEventListener("click", () => {
+        eliminarProducto(producto.id);
+        });
         contenedorColecciones.appendChild(tarjeta);
     }
 }
+    // elimina un producto
+function eliminarProducto(idEliminar) {
+    const productos = obtenerProductos();
+    const nuevaLista = [];
 
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].id !== idEliminar) {
+            nuevaLista.push(productos[i]);
+        }
+    }
+
+    localStorage.setItem("productos", JSON.stringify(nuevaLista));
+    renderizarCatalogo();
+}
 // agrega un producto
 formAlta.addEventListener("submit", (e) => {
     e.preventDefault();

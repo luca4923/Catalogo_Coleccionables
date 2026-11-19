@@ -7,31 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-    <header id="cabecera" class="cabecera">
+<header class="cabecera">
 
         <div class="logo">
-            <a class="logo-link" href="main.html">
-                <img class="log-imagen" src="imagenes/logoMain.png" alt="Logo">
-            </a>
+          <a class="logo-link" href="main.html">
+            <img class="log-imagen" src="imagenes/logoMain.png" alt="Logo">
+          </a>
         </div>
 
-        <div class="navegacion">
-            <a href="miCuenta.html" class="enlace">
-                <h6 class="sub-navegacion">Mi Cuenta</h6>
-            </a>
-        </div>
 
-        <div class="favoritos-carrito">
+
+          <a href="miCuenta.html" class="enlace">
+            <h6 class="sub-navegacion">Mi Cuenta</h6>
+          </a>
+          <div class="divisor"></div>
             <button type="button" id="btn-cambiar-vista" class="btn-vista">Vista Usuario</button>   
             <button class="modo-oscuro-boton" id="oscuro">
                 <img src="imagenes/modo-dia.png" alt="modo" class="imagen-modo">
             </button>
         </div>
-    </header>
+
+  </header>
     <div class="final-encabezado"></div>
 
     <main class="contenedor-admin">
@@ -138,7 +138,8 @@
     </div>
     <script src="js/datos.js"></script>
     <script src="js/admin.js"></script>
-    
+    <script src="js/modoOscuro.js"></script>
+
 </body>
 
 </html>

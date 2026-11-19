@@ -38,11 +38,27 @@ function renderizarCatalogo() {
             <button type="button" class="btn-editar-item">Editar</button>
             <button type="button" class="btn-eliminar-item">Eliminar figura</button>
         `;
-
+        const btnEliminar = tarjeta.querySelector(".btn-eliminar-item");
+        btnEliminar.addEventListener("click", () => {
+        eliminarProducto(producto.id);
+        });
         contenedorColecciones.appendChild(tarjeta);
     }
 }
+    // elimina un producto
+function eliminarProducto(idEliminar) {
+    const productos = obtenerProductos();
+    const nuevaLista = [];
 
+    for (let i = 0; i < productos.length; i++) {
+        if (productos[i].id !== idEliminar) {
+            nuevaLista.push(productos[i]);
+        }
+    }
+
+    localStorage.setItem("productos", JSON.stringify(nuevaLista));
+    renderizarCatalogo();
+}
 // agrega un producto
 formAlta.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -96,32 +112,7 @@ for (let i = 0; i < botonesCategoria.length; i++) {
     });
 }
 
-// Modo oscuro
-const btnOscuro = document.querySelector("#oscuro");
-const iconoTema = document.querySelector(".imagen-modo");
-const cabecera = document.querySelector("#cabecera");
-const footer = document.querySelector("#Footer");
 
-if (localStorage.getItem("modo-oscuro") === "true") {
-    document.body.classList.add("body-oscuro");
-    cabecera.classList.add("cabecera-oscuro");
-    footer.classList.add("footer-oscuro");
-    iconoTema.src = "imagenes/modo-oscuro.png";
-}
 
-btnOscuro.addEventListener("click", () => {
-    document.body.classList.toggle("body-oscuro");
-    cabecera.classList.toggle("cabecera-oscuro");
-    footer.classList.toggle("footer-oscuro");
-
-    const estaOscuro = document.body.classList.contains("body-oscuro");
-    localStorage.setItem("modo-oscuro", estaOscuro);
-
-    if (estaOscuro) {
-        iconoTema.src = "imagenes/modo-oscuro.png";
-    } else {
-        iconoTema.src = "imagenes/modo-dia.png";
-    }
-});
 
 renderizarCatalogo();

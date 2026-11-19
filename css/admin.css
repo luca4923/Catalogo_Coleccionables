@@ -7,7 +7,9 @@
     width: 100%;
     height: 8px;
 }
-
+.divisor{
+    width: 70%;
+}
 .contenedor-admin {
     max-width: 85vw;
     margin: 2rem auto;
@@ -58,7 +60,8 @@
 .campo-form label {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #0A4B3E;
+    color: #056C5C;
+    font-weight: bold;
 }
 
 .campo-form input,
@@ -267,4 +270,32 @@ body.body-oscuro .boton-categoria {
         width: 100%;
         max-width: 22rem;
     }
+}
+
+/*  MODO OSCURO */
+.tarjeta-alta-oscuro{
+    background-color: #1e1e1e;
+    border-color: #056C5C;
+}
+.campo-form-oscuro input{
+    background-color: #1e1e1e;
+    color: #b8d4ce;
+}
+.campo-form-oscuro select{
+    background-color: #1e1e1e;
+    color: #b8d4ce;
+}
+.campo-form-oscuro input[type="file"]::file-selector-button{
+    background-color: #1e1e1e;
+    color: #b8d4ce;
+    border: none;
+    border: solid 2px #056C5C;
+}
+.boton-categoria-oscuro{
+    background-color:#1e1e1e ;
+    color: #fff;
+    border-color: #056C5C;
+}
+.btn-eliminar-item-oscuro{
+    background-color:#1e1e1e ;
 }

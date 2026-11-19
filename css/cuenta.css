@@ -146,16 +146,17 @@ body {
     right: 10px;
     background-color: #056C5C;
     border-radius: 5px;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 12px 5px 0px;
     font-size: 14px;
     font-weight: bold;
-    color:#eee; 
-    width: 100px;
+    color: #eee;
+    min-width: 115px; /* Reemplaza width: 100px para que entre bien GUARDAR */
     height: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border: none;
+    cursor: pointer;
 }
 
 .editar:hover {
@@ -203,6 +204,45 @@ body {
     font-size: 13px;
 }
 
+/* Estilo base para inputs y select al editar en Mi Cuenta */
+.detalles-caja input,
+.detalles-caja select {
+  width: 100%;
+  max-width: 240px;
+  padding: 6px 10px;
+  margin: 4px 0;
+  border: 1px solid #056C5C;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #f6f6f6;
+  color: #111111;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.detalles-caja input:focus,
+.detalles-caja select:focus {
+  border-color: #099e87;
+  box-shadow: 0 0 0 2px rgba(5, 108, 92, 0.25);
+}
+
+/* Adaptación al modo oscuro (cubriendo las clases que usa modoOscuro.js) */
+body.oscuroBody .detalles-caja input,
+body.oscuroBody .detalles-caja select,
+body.body-oscuro .detalles-caja input,
+body.body-oscuro .detalles-caja select {
+  background-color: #252525;
+  color: #f1f1f1;
+  border: 1px solid #056C5C;
+}
+
+/* Para que el icono del almanaque en el input date se vea blanco en modo oscuro */
+body.oscuroBody .detalles-caja input[type="date"]::-webkit-calendar-picker-indicator,
+body.body-oscuro .detalles-caja input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
 
 
 

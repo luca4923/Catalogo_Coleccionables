@@ -43,7 +43,7 @@ function renderizarProductos() {
             caja.classList.add("cajas");
 
             caja.innerHTML = `
-                <a href="catalogo.html">
+                <a href="catalogo.html" class="enlace-producto">
                     <img class="figura" src="${producto.imagen}" alt="${producto.nombre}">
                     <img class="figura-corazon" src="imagenes/boton_corazon.png" alt="">
                 </a>
@@ -52,6 +52,10 @@ function renderizarProductos() {
                     <p class="precio">${producto.precio}$</p>
                 </div>
             `;
+
+            caja.querySelector(".enlace-producto").addEventListener("click", () => {
+                sessionStorage.setItem("productoSeleccionado", JSON.stringify(producto));
+            });
 
             colecciones.appendChild(caja);
         }

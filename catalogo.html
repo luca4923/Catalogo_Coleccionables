@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jetpack Trooper</title>
+    <title>Producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -54,16 +54,16 @@
 
         <div class = "contenedor-imagen">
             <div class= "margen_imagen">
-                <img src="imagenes/trooper_starWars/hot-toys-star-wars-jetpack-trooper-sixth-scale-figure-gallery-6a8efdd0aea44.jpg" alt="" class="imagen">
+                <img src="" alt="" class="imagen" id="producto-imagen">
             </div>
 
             <div class="descripcion">
-                <h1 class="titulo">Jetpack Trooper - Star Wars</h1>
-                <h4>Figura Escala 1/6</h4>
+                <h1 class="titulo" id="producto-nombre"></h1>
+                <h4 id="producto-detalle"></h4>
                 <h5 class="marca">
                     <a href="#" class="enlace">Hot Toys</a>
                 </h5>
-                <h1 class="precio">$29.99</h1>
+                <h1 class="precio" id="producto-precio"></h1>
                 <button class="boton_carrito">Agregar al Carrito</button>
                 <button class="boton">
                     <a href="#" class="enlace">Comprar ahora</a>
@@ -74,7 +74,7 @@
                     <details>
                         <summary class="detalles-lista">Detalles del producto</summary>
                         <div class="contenido-lista">
-                            <p>Información adicional sobre el producto...</p>
+                            <p id="producto-informacion"></p>
                         </div>
                     </details>
                 </div>
@@ -172,5 +172,7 @@
     </div>
 
     </main>
+    <script src="js/datos.js"></script>
+    <script src="js/catalogo.js"></script>
 </body>
 </html>

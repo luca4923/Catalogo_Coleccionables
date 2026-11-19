@@ -241,6 +241,11 @@ body {
     box-shadow: 0 2px 4px rgb(0 0 0 / 42%);
 }
 
+.boton-categoria.activa {
+    background-color: #056C5C;
+    color: #ffffff;
+}
+
 
 /*-------------------------------Parte de las figuras--------------------------------*/
 .colecciones {
@@ -317,7 +322,7 @@ body {
 /*---------------Modo oscuro-----------------*/
 
 .coleccionesOscuro{
-    background-color: #f20707;
+    background-color: #2a2a2b;
 }
 
 

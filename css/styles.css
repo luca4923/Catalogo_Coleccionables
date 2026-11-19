@@ -698,83 +698,19 @@ body {
         width: 40vw;
     }
 }
-/* ================= MODO OSCURO ================= */
-/*BODY*/
-.body-oscuro{
-background-color: #121212;
-color: #fff;
-}
-/* Header */
-.cabecera-oscuro {
-    background-color: #1e1e1e;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
 
-.buscador-input-oscuro {
-    background-color: #2a2a2a;
-    border: 1px solid #444;
-    color: #fff;
-}
+.cajas-con-sombras {
+    background-color: #F2F2F2;
 
-/* Menú lateral */
-.campo-nav-oscuro {
-    background-color: #1e1e1e;
-}
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777;
+    width: 90%;
 
-.secciones-oscuro {
-    background-color: #1e1e1e;
-}
-
-.seleccion-oscuro {
-    background-color: #2a2a2a;
-}
-
-.secciones-oscuro:hover,
-.seleccion-oscuro:hover {
-    background-color: #0A4B3E;
-}
-
-.enlaces-nav-oscuro {
-    color: #fff;
-}
-
-.separador-oscuro {
-    background-color: #555;
-}
-
-/* Fondo de las secciones */
-.mi-cuenta-oscuro,
-.interfaz-favoritos-oscuro {
-    background-color: #121212;
 }
 
 
-/* Tarjetas */
-.tarjeta-oscuro {
-    background-color: #1e1e1e;
-    box-shadow: 0 0 10px #000;
-    color: #fff;
-}
-.eliminar-oscuro {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #056C5C;
-}
-.eliminar-oscuro:hover{
-    background-color: #0A4B3E;
-}
-
-
-
-/* Footer */
-.footer-oscuro {
-    background-color: #1e1e1e;
-    border-top: 1px solid #4fd1b5;
-}
-
-.texto-footer-oscuro {
-    color: #4fd1b5;
-}
 /*      Tarjeta producto    */
 
 .tarjeta-producto {
@@ -862,6 +798,83 @@ color: #fff;
 /*FIN TARJETAS*/
 
 /*      MODO OSCURO GENERAL     */
+/* ================= MODO OSCURO ================= */
+/*BODY*/
+.body-oscuro{
+background-color: #121212;
+color: #fff;
+}
+/* Header */
+.cabecera-oscuro {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.buscador-input-oscuro {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+/* Menú lateral */
+.campo-nav-oscuro {
+    background-color: #1e1e1e;
+}
+
+.secciones-oscuro {
+    background-color: #1e1e1e;
+}
+
+.seleccion-oscuro {
+    background-color: #2a2a2a;
+}
+
+.secciones-oscuro:hover,
+.seleccion-oscuro:hover {
+    background-color: #0A4B3E;
+}
+
+.enlaces-nav-oscuro {
+    color: #fff;
+}
+
+.separador-oscuro {
+    background-color: #555;
+}
+
+/* Fondo de las secciones */
+.mi-cuenta-oscuro,
+.interfaz-favoritos-oscuro {
+    background-color: #121212;
+}
+
+
+/* Tarjetas */
+.tarjeta-oscuro {
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px #000;
+    color: #fff;
+}
+.eliminar-oscuro {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #056C5C;
+}
+.eliminar-oscuro:hover{
+    background-color: #0A4B3E;
+}
+
+
+
+/* Footer */
+.footer-oscuro {
+    background-color: #1e1e1e;
+    border-top: 1px solid #4fd1b5;
+}
+
+.texto-footer-oscuro {
+    color: #4fd1b5;
+}
     /* Tarjetas */
 .tarjeta-producto-oscuro {
     background-color: #1e1e1e;

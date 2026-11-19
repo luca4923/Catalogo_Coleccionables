@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/carrito.css">
 </head>
@@ -66,7 +69,6 @@
                 </div>
                 <div class="caja-final">
                     <p class="precio-tarjeta">$49.999</p>
-                    <button type="button" class="agregar-carrito">AGREGAR AL CARRITO</button>
                     <button type="button" class="eliminar">
                     <img src="imagenes/basura.png" alt="ELIMINAR" class="eliminar-img">
                     ELIMINAR
@@ -82,7 +84,6 @@
                 </div>
                 <div class="caja-final">
                     <p class="precio-tarjeta">$23,000</p>
-                    <button type="button" class="agregar-carrito">AGREGAR AL CARRITO</button>
                     <button type="button" class="eliminar">
                     <img src="imagenes/basura.png" alt="ELIMINAR" class="eliminar-img">
                     ELIMINAR
@@ -92,19 +93,25 @@
         </section>
 
         <section class="carrito-resumen-campo">
-            <h2 class="subtitulo">Resumen de compra</h2>
-            <div class="descripcion-precio">
+            <h2 class="resumen-compra">Resumen de compra</h2>
+            <div class="cajas-con-sombras">
+                <div class="descripcion-precio">
                 <div>Productos</div>
                 <div>$72.999</div>
-            </div>
-            <div class="descripcion-precio">
+                </div>
+                <div class="descripcion-precio">
                 <div>Envio</div>
                 <div>$18.000</div>
-            </div>
-            <div class="descripcion-precio">
+                </div>
+                <div class="separador"></div>
+                <div class="descripcion-precio">
                 <div class="total">Total</div>
                 <div class="precio-total">90.999</div>
-            </div>
+                </div>
+                <button class="boton-pagar">
+                    <div class="pagar-texto">PAGAR</div>
+                </button>
+            </div> 
         </section>
     </div>
 

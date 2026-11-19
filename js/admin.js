@@ -51,32 +51,37 @@ formAlta.addEventListener("submit", (e) => {
     const categoria = document.querySelector("#prod-categoria").value;
     const precio = Number(document.querySelector("#prod-precio").value);
     const detalle = document.querySelector("#prod-detalle").value;
-    const archivoRuta = document.querySelector("#prod-imagen-archivo").value;
+    const archivo = document.querySelector("#prod-imagen-archivo").files[0];
 
-    let imagen = "imagenes/logoMain.png";
+    function guardarNuevaFigura(rutaImagen) {
+        const productos = obtenerProductos();
 
-    if (archivoRuta !== "") {
-        const nombreArchivo = archivoRuta.split("\\").pop();
-        imagen = "imagenes/main/" + nombreArchivo;
+        const nuevoProducto = {
+            id: Date.now(),
+            nombre: nombre,
+            categoria: categoria,
+            detalle: detalle,
+            precio: precio,
+            imagen: rutaImagen
+        };
+
+        productos.push(nuevoProducto);
+        localStorage.setItem("productos", JSON.stringify(productos));
+
+        formAlta.reset();
+        renderizarCatalogo();
+        mensajeAlta.textContent = "Figura agregada correctamente.";
     }
 
-    const productos = obtenerProductos();
-
-    const nuevoProducto = {
-        id: Date.now(),
-        nombre: nombre,
-        categoria: categoria,
-        detalle: detalle,
-        precio: precio,
-        imagen: imagen
-    };
-
-    productos.push(nuevoProducto);
-    localStorage.setItem("productos", JSON.stringify(productos));
-
-    formAlta.reset();
-    renderizarCatalogo();
-    mensajeAlta.textContent = "Figura agregada correctamente.";
+    if (archivo) {
+        const lector = new FileReader();
+        lector.onload = () => {
+            guardarNuevaFigura(lector.result);
+        };
+        lector.readAsDataURL(archivo);
+    } else {
+        guardarNuevaFigura("imagenes/logoMain.png");
+    }
 });
 
 // filtra por categoria
@@ -90,9 +95,6 @@ for (let i = 0; i < botonesCategoria.length; i++) {
         renderizarCatalogo();
     });
 }
-
-renderizarCatalogo();
-
 
 // Modo oscuro
 const btnOscuro = document.querySelector("#oscuro");
@@ -122,3 +124,4 @@ btnOscuro.addEventListener("click", () => {
     }
 });
 
+renderizarCatalogo();

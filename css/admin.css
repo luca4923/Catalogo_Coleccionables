@@ -172,9 +172,9 @@
     margin-top: 0.2rem;
     width: 100%;
     padding: 0.5rem;
-    background-color: #ffffff;
-    color: #c9302c;
-    border: 1px solid #c9302c;
+    background-color: #c9302c;
+    color: #ffffff;
+    border: none;
     border-radius: 5px;
     font-family: inherit;
     font-weight: bold;
@@ -182,8 +182,7 @@
 }
 
 .btn-eliminar-item:hover {
-    background-color: #c9302c;
-    color: #ffffff;
+    background-color: #a82420;
 }
 
 .favoritos-carrito {
@@ -251,6 +250,11 @@ body.body-oscuro .tarjetas p {
 body.body-oscuro .Derechos {
     background-color: #141414;
     color: #cccccc;
+}
+
+body.body-oscuro .boton-categoria {
+    background-color: #1e1e1e;
+    color: #056C5C;
 }
 
 @media (max-width: 768px) {

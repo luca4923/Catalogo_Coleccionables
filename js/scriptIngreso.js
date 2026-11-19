@@ -1,29 +1,8 @@
-// Precarga de cuentas por defecto (Admin y Usuario)
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-const cuentasPorDefecto = [
-  {
-    nombre: "Admin",
-    email: "admin@coleccionables.com",
-    password: "Admin123!",
-    rol: "admin"
-  },
-  {
-    nombre: "Usuario Prueba",
-    email: "usuario@coleccionables.com",
-    password: "Usuario123!",
-    rol: "usuario"
-  }
-];
-
-cuentasPorDefecto.forEach((cuenta) => {
-  const yaExiste = usuarios.some((u) => u.email === cuenta.email);
-  if (!yaExiste) {
-    usuarios.push(cuenta);
-  }
-});
-
-localStorage.setItem("usuarios", JSON.stringify(usuarios));
+// Verifica si existe al menos un administrador registrado
+function hayAdmin() {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  return usuarios.some((u) => u.rol === "admin");
+}
 
 // Acceso rápido para Admin y Usuario
 const btnAdmin = document.getElementById("Admin-rapido");
@@ -117,7 +96,7 @@ formRegistro.addEventListener("submit", (event) => {
     nombre: nombre,
     email: email,
     password: password,
-    rol: "usuario"
+    rol: hayAdmin() ? "usuario" : "admin"
   };
 
   usuarios.push(nuevoUsuario);
@@ -173,6 +152,18 @@ function mostrarVista(vista) {
   vistaAcceso.classList.add("oculto");
   vistaLogin.classList.add("oculto");
   vistaRegistro.classList.add("oculto");
+
+  if (!hayAdmin()) {
+    vistaRegistro.classList.remove("oculto");
+    document.getElementById("titulo-registro").textContent = "Crear Primer Administrador";
+    document.getElementById("subtitulo-registro").textContent = "Creá el primer perfil Administrador para comenzar.";
+    document.getElementById("cambiar-a-login").classList.add("oculto");
+    return;
+  }
+
+  document.getElementById("titulo-registro").textContent = "Crear Cuenta";
+  document.getElementById("subtitulo-registro").textContent = "";
+  document.getElementById("cambiar-a-login").classList.remove("oculto");
 
   if (vista === "login") {
     vistaLogin.classList.remove("oculto");

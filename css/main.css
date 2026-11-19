@@ -304,22 +304,21 @@ body {
     fill: #056C5C;
 }
 
-/* Modo oscuro para controles y lista */
-body.body-oscuro .btn-tipo-vista {
-    background-color: #1e1e1e;
-    color: #4fd1b5;
-    border-color: #4fd1b5;
-}
-
-body.body-oscuro .btn-tipo-vista.activa {
-    background-color: #056C5C;
+/* Textos de las tarjetas en modo oscuro */
+body.body-oscuro .descripcion,
+body.body-oscuro .precio {
     color: #ffffff;
-    border-color: #056C5C;
 }
 
-body.body-oscuro .colecciones.vista-lista .cajas {
-    border-color: #2d423e;
+body.body-oscuro .detalle-item {
+    color: #cccccc;
 }
+
+body.body-oscuro .Derechos {
+    background-color: #141414;
+    color: #cccccc;
+}
+
 /*-------------------------------Parte de las figuras--------------------------------*/
 .colecciones {
     display: flex;
@@ -471,6 +470,8 @@ body.body-oscuro .colecciones.vista-lista .cajas {
 .btn-vista:hover {
     background-color: #045a4b;
 }
+
+
 
 /*-----------------Estilo de tablet------------------*/
 @media (width <=768px) {

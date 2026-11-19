@@ -208,6 +208,51 @@
     background-color: #045a4b;
 }
 
+/* Modo oscuro - Panel Administrador */
+body.body-oscuro .encabezado-panel h1,
+body.body-oscuro .tarjeta-alta h2 {
+    color: #ffffff;
+}
+
+body.body-oscuro .subtitulo-panel {
+    color: #cccccc;
+}
+
+body.body-oscuro .tarjeta-alta {
+    background-color: #1e1e1e;
+    border-color: #333333;
+}
+
+body.body-oscuro .campo-form label {
+    color: #e0e0e0;
+}
+
+body.body-oscuro .campo-form input,
+body.body-oscuro .campo-form select {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.body-oscuro .tarjetas {
+    background-color: #1e1e1e;
+    border-color: #333333;
+}
+
+body.body-oscuro .tarjetas .titulo-figura, 
+body.body-oscuro .tarjetas h3 {
+    color: #ffffff;
+}
+
+body.body-oscuro .tarjetas p {
+    color: #cccccc;
+}
+
+body.body-oscuro .Derechos {
+    background-color: #141414;
+    color: #cccccc;
+}
+
 @media (max-width: 768px) {
     .productos {
         flex-direction: column;

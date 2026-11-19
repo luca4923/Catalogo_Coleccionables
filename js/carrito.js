@@ -30,10 +30,14 @@ function guardarCarrito(carrito) {
 function abrirCarrito() {
     renderizarCarrito();
     carritoSuperposicion.classList.add("abierto");
+    document.documentElement.style.overflowX = "hidden";
+    document.body.style.overflow = "hidden";
 }
 
 function cerrarCarrito() {
     carritoSuperposicion.classList.remove("abierto");
+    document.documentElement.style.overflowX = "";
+    document.body.style.overflow = "";
 }
 
 function renderizarCarrito() {

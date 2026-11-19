@@ -1,79 +1,14 @@
-<<<<<<< HEAD
-.carrito{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.titulo{
-    width: 100%;
-    margin: 30px 20px 10px 60px;
-
-}
-.resumen-compra{
-    margin: 20px 20px 20px 0;
-    color: #056C5C;
-}
-.subtitulo{
-        margin: 20px;
-}
-.carrito-productos-campo{
-    padding-left: 40px;
-    width: 67%;
-}
-.carrito-resumen-campo{
-    width: 400px;
+html,
+body {
+    overflow-x: hidden;
 }
 
-.descripcion-precio{
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-.separador{
-    width: 95%;
-    height: 1px;
-    background-color: #056C5C;
-    margin: auto;
-}
-.total{
-    font-weight: bold;
-}
-.precio-total{
-    font-weight: bold;
-
-}
-.boton-pagar{
-    width: 80%;
-    text-align: center;
-    display: block;
-    margin: auto;
-    font-size: 14px;
-    padding: 4px 0;
-    background-color: #056C5C;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-}
-.boton-pagar:hover{
-        background-color: #08b399;
-
-}
-
-/*      MODO OSCURO       */
-.carrito-oscuro{
-    background-color: #121212;
-}
-.body-carrito-oscuro{
-    background-color:#121212 ;
-}
-=======
 .carrito-superposicion {
     position: fixed;
     inset: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.35);
     opacity: 0;
@@ -91,6 +26,8 @@
     top: 0;
     right: 0;
     width: min(420px, 92vw);
+    max-width: 100%;
+    box-sizing: border-box;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -249,4 +186,3 @@
     text-align: center;
     color: #777;
 }
->>>>>>> LUCA

@@ -149,6 +149,10 @@ body {
     width: 100%;
 }
 
+.oculto { 
+    display: none; 
+}
+
 
 
 
@@ -223,7 +227,99 @@ body {
     box-shadow: 0 2px 4px rgb(0 0 0 / 42%);
 }
 
+/* Controles Vista Tarjetas / Lista */
+.controles-vista {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    max-width: 90rem;
+    width: 85vw;
+    margin: 1.5rem auto 0;
+}
 
+.btn-tipo-vista {
+    background-color: #f7fefc;
+    color: #056C5C;
+    border: 1px solid #056C5C;
+    border-radius: 8px;
+    padding: 0.45rem 0.95rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-tipo-vista.activa {
+    background-color: #056C5C;
+    color: #ffffff;
+}
+
+/* Vista Lista en el catalogo */
+.colecciones.vista-lista {
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    padding: 1.5rem;
+}
+
+.colecciones.vista-lista .cajas {
+    flex: 1 1 auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #cde4de;
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+}
+
+.colecciones.vista-lista .cajas a {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.colecciones.vista-lista .descripcion {
+    align-items: flex-start;
+    padding-left: 1.5rem;
+}
+
+/* Corazon Favorito */
+.figura-corazon {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 0.2s ease;
+}
+
+.figura-corazon:hover {
+    transform: scale(1.1);
+}
+
+.figura-corazon.favorito-activo path {
+    fill: #056C5C;
+}
+
+/* Modo oscuro para controles y lista */
+body.body-oscuro .btn-tipo-vista {
+    background-color: #1e1e1e;
+    color: #4fd1b5;
+    border-color: #4fd1b5;
+}
+
+body.body-oscuro .btn-tipo-vista.activa {
+    background-color: #056C5C;
+    color: #ffffff;
+    border-color: #056C5C;
+}
+
+body.body-oscuro .colecciones.vista-lista .cajas {
+    border-color: #2d423e;
+}
 /*-------------------------------Parte de las figuras--------------------------------*/
 .colecciones {
     display: flex;

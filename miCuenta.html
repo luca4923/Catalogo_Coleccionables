@@ -83,7 +83,7 @@
                 PREFERENCIAS
             </a>
         <div class="separador"></div>
-            <a href="Ingreso.html" class="enlaces-nav secciones">
+            <a href="Ingreso.html" id="btn-cerrar-sesion" class="enlaces-nav secciones">
                 <img src="imagenes/salir.svg" alt="salir" class="imagen-nav">
                 CERRAR SESION
             </a>
@@ -102,50 +102,48 @@
       <section class="cajas-con-sombras">
         <img src="imagenes/micuenta.svg" alt="mis datos" class="imagen-caja">
         <div class="separador-caja"></div>
-        <div class="detalles-caja">
-
-        <h2 class="subtitulo">Detalles</h2>
-        <p>Areil Fernadez</p>
-        <p>23-12-1994</p>
-        <p>Hombre</p>
-        <p>37.720.822</p>
+        <div class="detalles-caja" id="caja-detalles">
+          <h2 class="subtitulo">Detalles</h2>
+          <p id="dato-nombre">-</p>
+          <p id="dato-nacimiento">Sin fecha de nacimiento</p>
+          <p id="dato-genero">Sin género</p>
+          <p id="dato-dni">Sin DNI</p>
         </div>
-        <button type="button" class="editar"> 
+        <button type="button" class="editar" id="btn-editar-detalles"> 
           <img src="imagenes/lapiz.png" alt="editar" class="imagen-editar">
-          <div>EDITAR</div>
+          EDITAR
         </button>
       </section>
 
       <section class="cajas-con-sombras">
         <img src="imagenes/candado.svg" alt="datos de acceso" class="imagen-caja">
-                <div class="separador-caja"></div>
-        <div class="detalles-caja">
-        <h2 class="subtitulo">Datos de Acceso</h2>
-        <h4>Correo Electronico</h4>
-        <p>arielfernandez1994@gmail.com</p>
-        <h4>Contraseña</h4>
-        <p>***********</p>
-        </div>
-        <button type="button" class="editar">
-          <img src="imagenes/lapiz.png" alt="editar" class="imagen-editar">
-          EDITAR
-        </button>
+        <div class="detalles-caja" id="caja-acceso">
+          <h2 class="subtitulo">Datos de Acceso</h2>
+          <h4>Correo Electronico</h4>
+          <p id="dato-email">-</p>
+          <h4>Contraseña</h4>
+          <p id="dato-password">***********</p>
+          </div>
+          <button type="button" class="editar" id="btn-editar-acceso">
+            <img src="imagenes/lapiz.png" alt="editar" class="imagen-editar">
+            EDITAR
+          </button>
       </section>
 
       <section class="cajas-con-sombras">
         <img src="imagenes/camion.svg" alt="datos de envio" class="imagen-caja">
         <div class="separador-caja"></div>
-        <div class="detalles-caja">
-        <h2 class="subtitulo">Datos de Envio</h2>
-        <p>Arieta 1234</p>
-        <p>San Justo, La Matanza</p>
-        <p>B1754</p>
-        <p>+54 9 11 2372-2323</p>
-        </div>
-        <button type="button" class="editar">
+        <div class="detalles-caja" id="caja-envio">
+          <h2 class="subtitulo">Datos de Envio</h2>
+          <p id="dato-direccion">Sin dirección</p>
+          <p id="dato-localidad">Sin localidad</p>
+          <p id="dato-cp">Sin código postal</p>
+          <p id="dato-telefono">Sin teléfono</p>
+          </div>
+          <button type="button" class="editar" id="btn-editar-envio">
           <img src="imagenes/lapiz.png" alt="editar" class="imagen-editar">
           EDITAR
-        </button>
+          </button>
       </section>
     </div>
 
@@ -189,6 +187,7 @@
     <div class="Derechos">
         <p>Figuras coleccionables todos los derechos reservados &copy; 2024</p>
     </div>
-    <script type="text/javaScript" src="js/modoOscuro.js"></script>
+    <script type="text/javaScript" src="js/modoOscuro.js">
+    </script><script src="js/miCuenta.js"></script>
 </body>
 </html>

@@ -39,28 +39,8 @@ function renderizarCatalogo() {
             <button type="button" class="btn-eliminar-item">Eliminar figura</button>
         `;
 
-        const btnEliminar = tarjeta.querySelector(".btn-eliminar-item");
-        btnEliminar.addEventListener("click", () => {
-            eliminarProducto(producto.id);
-        });
-
         contenedorColecciones.appendChild(tarjeta);
     }
-}
-
-// elimina un producto
-function eliminarProducto(idEliminar) {
-    const productos = obtenerProductos();
-    const nuevaLista = [];
-
-    for (let i = 0; i < productos.length; i++) {
-        if (productos[i].id !== idEliminar) {
-            nuevaLista.push(productos[i]);
-        }
-    }
-
-    localStorage.setItem("productos", JSON.stringify(nuevaLista));
-    renderizarCatalogo();
 }
 
 // agrega un producto
@@ -71,32 +51,37 @@ formAlta.addEventListener("submit", (e) => {
     const categoria = document.querySelector("#prod-categoria").value;
     const precio = Number(document.querySelector("#prod-precio").value);
     const detalle = document.querySelector("#prod-detalle").value;
-    const archivoRuta = document.querySelector("#prod-imagen-archivo").value;
+    const archivo = document.querySelector("#prod-imagen-archivo").files[0];
 
-    let imagen = "imagenes/logoMain.png";
+    function guardarNuevaFigura(rutaImagen) {
+        const productos = obtenerProductos();
 
-    if (archivoRuta !== "") {
-        const nombreArchivo = archivoRuta.split("\\").pop();
-        imagen = "imagenes/main/" + nombreArchivo;
+        const nuevoProducto = {
+            id: Date.now(),
+            nombre: nombre,
+            categoria: categoria,
+            detalle: detalle,
+            precio: precio,
+            imagen: rutaImagen
+        };
+
+        productos.push(nuevoProducto);
+        localStorage.setItem("productos", JSON.stringify(productos));
+
+        formAlta.reset();
+        renderizarCatalogo();
+        mensajeAlta.textContent = "Figura agregada correctamente.";
     }
 
-    const productos = obtenerProductos();
-
-    const nuevoProducto = {
-        id: Date.now(),
-        nombre: nombre,
-        categoria: categoria,
-        detalle: detalle,
-        precio: precio,
-        imagen: imagen
-    };
-
-    productos.push(nuevoProducto);
-    localStorage.setItem("productos", JSON.stringify(productos));
-
-    formAlta.reset();
-    renderizarCatalogo();
-    mensajeAlta.textContent = "Figura agregada correctamente.";
+    if (archivo) {
+        const lector = new FileReader();
+        lector.onload = () => {
+            guardarNuevaFigura(lector.result);
+        };
+        lector.readAsDataURL(archivo);
+    } else {
+        guardarNuevaFigura("imagenes/logoMain.png");
+    }
 });
 
 // filtra por categoria
@@ -110,5 +95,33 @@ for (let i = 0; i < botonesCategoria.length; i++) {
         renderizarCatalogo();
     });
 }
+
+// Modo oscuro
+const btnOscuro = document.querySelector("#oscuro");
+const iconoTema = document.querySelector(".imagen-modo");
+const cabecera = document.querySelector("#cabecera");
+const footer = document.querySelector("#Footer");
+
+if (localStorage.getItem("modo-oscuro") === "true") {
+    document.body.classList.add("body-oscuro");
+    cabecera.classList.add("cabecera-oscuro");
+    footer.classList.add("footer-oscuro");
+    iconoTema.src = "imagenes/modo-oscuro.png";
+}
+
+btnOscuro.addEventListener("click", () => {
+    document.body.classList.toggle("body-oscuro");
+    cabecera.classList.toggle("cabecera-oscuro");
+    footer.classList.toggle("footer-oscuro");
+
+    const estaOscuro = document.body.classList.contains("body-oscuro");
+    localStorage.setItem("modo-oscuro", estaOscuro);
+
+    if (estaOscuro) {
+        iconoTema.src = "imagenes/modo-oscuro.png";
+    } else {
+        iconoTema.src = "imagenes/modo-dia.png";
+    }
+});
 
 renderizarCatalogo();

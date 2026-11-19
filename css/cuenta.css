@@ -146,16 +146,17 @@ body {
     right: 10px;
     background-color: #056C5C;
     border-radius: 5px;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 12px 5px 0px;
     font-size: 14px;
     font-weight: bold;
-    color:#eee; 
-    width: 100px;
+    color: #eee;
+    min-width: 115px; /* Reemplaza width: 100px para que entre bien GUARDAR */
     height: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border: none;
+    cursor: pointer;
 }
 
 .editar:hover {
@@ -203,6 +204,45 @@ body {
     font-size: 13px;
 }
 
+/* Estilo base para inputs y select al editar en Mi Cuenta */
+.detalles-caja input,
+.detalles-caja select {
+  width: 100%;
+  max-width: 240px;
+  padding: 6px 10px;
+  margin: 4px 0;
+  border: 1px solid #056C5C;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #f6f6f6;
+  color: #111111;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.detalles-caja input:focus,
+.detalles-caja select:focus {
+  border-color: #099e87;
+  box-shadow: 0 0 0 2px rgba(5, 108, 92, 0.25);
+}
+
+/* Adaptación al modo oscuro (cubriendo las clases que usa modoOscuro.js) */
+body.oscuroBody .detalles-caja input,
+body.oscuroBody .detalles-caja select,
+body.body-oscuro .detalles-caja input,
+body.body-oscuro .detalles-caja select {
+  background-color: #252525;
+  color: #f1f1f1;
+  border: 1px solid #056C5C;
+}
+
+/* Para que el icono del almanaque en el input date se vea blanco en modo oscuro */
+body.oscuroBody .detalles-caja input[type="date"]::-webkit-calendar-picker-indicator,
+body.body-oscuro .detalles-caja input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
 
 
 
@@ -279,4 +319,97 @@ body {
 }
 .eliminar-oscuro:hover{
     background-color: #0A4B3E;
+}
+
+/* Tarjetas de Favoritos (mismo estilo que main.css) */
+.grilla-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 20px 40px 40px 40px;
+}
+
+.tarjeta-fav {
+    flex: 0 1 calc(25% - 1.5rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.6rem;
+    gap: 0.6rem;
+}
+
+.contenedor-img-fav {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.img-fav {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1.25rem;
+}
+
+.btn-quitar-fav {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.descripcion-fav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.3rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: inherit;
+}
+
+.detalle-fav {
+    margin: 0.3rem 0 0 0;
+    text-transform: none;
+    font-weight: normal;
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+.precio-fav {
+    margin: 0.2rem 0;
+    text-transform: none;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.15rem;
+}
+
+/* Modo oscuro */
+body.body-oscuro .detalle-fav {
+    color: #cccccc;
+}
+
+body.body-oscuro .precio-fav {
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .tarjeta-fav {
+        flex: 0 1 calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .tarjeta-fav {
+        flex: 0 1 100%;
+    }
 }

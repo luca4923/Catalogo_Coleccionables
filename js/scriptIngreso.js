@@ -1,41 +1,31 @@
-//Usuario administrador
-const usuariosIniciales = JSON.parse(localStorage.getItem("usuarios")) || [];
-const existeAdmin = usuariosIniciales.some((u) => u.email === "admin@coleccionables.com");
-
-if (!existeAdmin) {
-  usuariosIniciales.push({
-    nombre: "Admin",
-    email: "admin@coleccionables.com",
-    password: "Admin123!", // Cumple con tus requisitos de contraseña
-    rol: "admin"
-  });
-  localStorage.setItem("usuarios", JSON.stringify(usuariosIniciales));
+// Verifica si existe al menos un administrador registrado
+function hayAdmin() {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  return usuarios.some((u) => u.rol === "admin");
 }
 
 // Acceso rápido para Admin y Usuario
 const btnAdmin = document.getElementById("Admin-rapido");
 const btnUsuario = document.getElementById("Usuario-rapido");
 
-btnAdmin.addEventListener("click", () => {
-  const admin = {
-    nombre: "Admin",
-    email: "admin@coleccionables.com",
-    rol: "admin"
-  };
+function iniciarAccesoRapido(email, destino) {
+  const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const encontrado = listaUsuarios.find((u) => u.email === email);
 
-  localStorage.setItem("usuarioLogueado", JSON.stringify(admin));
-  window.location.href = "main.html";
+  if (encontrado) {
+    const { password, ...sesionSinPassword } = encontrado;
+    localStorage.setItem("usuarioLogueado", JSON.stringify(sesionSinPassword));
+    sessionStorage.removeItem("vistaIngresoActual");
+    window.location.href = destino;
+  }
+}
+
+btnAdmin.addEventListener("click", () => {
+  iniciarAccesoRapido("admin@coleccionables.com", "admin.html");
 });
 
 btnUsuario.addEventListener("click", () => {
-    const usuario = {
-        nombre: "Usuario",
-        email: "usuario@coleccionables.com",
-        rol: "usuario"
-    };
-
-    localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
-    window.location.href = "main.html";
+  iniciarAccesoRapido("usuario@coleccionables.com", "main.html");
 });
 
 //registro de usuario
@@ -106,7 +96,7 @@ formRegistro.addEventListener("submit", (event) => {
     nombre: nombre,
     email: email,
     password: password,
-    rol: "usuario"
+    rol: hayAdmin() ? "usuario" : "admin"
   };
 
   usuarios.push(nuevoUsuario);
@@ -145,7 +135,12 @@ formLogin.addEventListener("submit", (event) => {
 
   localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
   sessionStorage.removeItem("vistaIngresoActual");
-  window.location.href = "main.html";
+
+  if (usuarioEncontrado.rol === "admin") {
+    window.location.href = "admin.html";
+  } else {
+    window.location.href = "main.html";
+  }
 });
 
 // Control de vistas (Acceso / Login / Registro) y persistencia al refrescar
@@ -158,6 +153,18 @@ function mostrarVista(vista) {
   vistaLogin.classList.add("oculto");
   vistaRegistro.classList.add("oculto");
 
+  if (!hayAdmin()) {
+    vistaRegistro.classList.remove("oculto");
+    document.getElementById("titulo-registro").textContent = "Crear Primer Administrador";
+    document.getElementById("subtitulo-registro").textContent = "Creá el primer perfil Administrador para comenzar.";
+    document.getElementById("cambiar-a-login").classList.add("oculto");
+    return;
+  }
+
+  document.getElementById("titulo-registro").textContent = "Crear Cuenta";
+  document.getElementById("subtitulo-registro").textContent = "";
+  document.getElementById("cambiar-a-login").classList.remove("oculto");
+
   if (vista === "login") {
     vistaLogin.classList.remove("oculto");
   } else if (vista === "registro") {
@@ -169,12 +176,39 @@ function mostrarVista(vista) {
   sessionStorage.setItem("vistaIngresoActual", vista);
 }
 
-
-const vistaGuardada = sessionStorage.getItem("vistaIngresoActual") || "acceso";
-mostrarVista(vistaGuardada);
-
 // Eventos de los botones para cambiar de pantalla
 document.getElementById("ir-a-login").addEventListener("click", () => mostrarVista("login"));
 document.getElementById("ir-a-registro").addEventListener("click", () => mostrarVista("registro"));
 document.getElementById("cambiar-a-registro").addEventListener("click", () => mostrarVista("registro"));
 document.getElementById("cambiar-a-login").addEventListener("click", () => mostrarVista("login"));
+
+
+const vistaGuardada = sessionStorage.getItem("vistaIngresoActual") || "acceso";
+mostrarVista(vistaGuardada);
+
+// Modo oscuro
+const btnOscuroIngreso = document.getElementById("oscuro");
+const iconoModoIngreso = document.querySelector(".imagen-modo");
+
+// Lee si el modo oscuro quedó activado desde main.html u otra vista
+let esModoOscuro = localStorage.getItem("modo-oscuro") === "true";
+
+function aplicarTemaIngreso(oscuro) {
+  if (oscuro) {
+    document.body.classList.add("oscuro-ingreso");
+    iconoModoIngreso.src = "imagenes/modo-oscuro.png";
+  } else {
+    document.body.classList.remove("oscuro-ingreso");
+    iconoModoIngreso.src = "imagenes/modo-dia.png";
+  }
+}
+
+aplicarTemaIngreso(esModoOscuro);
+
+
+btnOscuroIngreso.addEventListener("click", () => {
+  esModoOscuro = !esModoOscuro;
+  localStorage.setItem("modo-oscuro", esModoOscuro);
+  aplicarTemaIngreso(esModoOscuro);
+});
+

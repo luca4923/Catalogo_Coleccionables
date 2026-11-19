@@ -9,6 +9,10 @@
     margin: 30px 20px 10px 60px;
 
 }
+.resumen-compra{
+    margin: 20px 20px 20px 0;
+    color: #056C5C;
+}
 .subtitulo{
         margin: 20px;
 }
@@ -17,14 +21,45 @@
     width: 67%;
 }
 .carrito-resumen-campo{
-    
+    width: 400px;
 }
 
 .descripcion-precio{
+    padding: 5px 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+
+.separador{
+    width: 95%;
+    height: 1px;
+    background-color: #056C5C;
+    margin: auto;
+}
+.total{
+    font-weight: bold;
+}
+.precio-total{
+    font-weight: bold;
+
+}
+.boton-pagar{
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    padding: 4px 0;
+    background-color: #056C5C;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+.boton-pagar:hover{
+        background-color: #08b399;
+
 }
 
 /*      MODO OSCURO       */

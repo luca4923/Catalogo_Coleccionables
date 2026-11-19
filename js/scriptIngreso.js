@@ -8,26 +8,24 @@ function hayAdmin() {
 const btnAdmin = document.getElementById("Admin-rapido");
 const btnUsuario = document.getElementById("Usuario-rapido");
 
-btnAdmin.addEventListener("click", () => {
-  const admin = {
-    nombre: "Admin",
-    email: "admin@coleccionables.com",
-    rol: "admin"
-  };
+function iniciarAccesoRapido(email, destino) {
+  const listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const encontrado = listaUsuarios.find((u) => u.email === email);
 
-  localStorage.setItem("usuarioLogueado", JSON.stringify(admin));
-  window.location.href = "main.html";
+  if (encontrado) {
+    const { password, ...sesionSinPassword } = encontrado;
+    localStorage.setItem("usuarioLogueado", JSON.stringify(sesionSinPassword));
+    sessionStorage.removeItem("vistaIngresoActual");
+    window.location.href = destino;
+  }
+}
+
+btnAdmin.addEventListener("click", () => {
+  iniciarAccesoRapido("admin@coleccionables.com", "admin.html");
 });
 
 btnUsuario.addEventListener("click", () => {
-    const usuario = {
-        nombre: "Usuario",
-        email: "usuario@coleccionables.com",
-        rol: "usuario"
-    };
-
-    localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
-    window.location.href = "main.html";
+  iniciarAccesoRapido("usuario@coleccionables.com", "main.html");
 });
 
 //registro de usuario
@@ -137,7 +135,12 @@ formLogin.addEventListener("submit", (event) => {
 
   localStorage.setItem("usuarioLogueado", JSON.stringify(usuarioEncontrado));
   sessionStorage.removeItem("vistaIngresoActual");
-  window.location.href = "main.html";
+
+  if (usuarioEncontrado.rol === "admin") {
+    window.location.href = "admin.html";
+  } else {
+    window.location.href = "main.html";
+  }
 });
 
 // Control de vistas (Acceso / Login / Registro) y persistencia al refrescar
@@ -173,12 +176,39 @@ function mostrarVista(vista) {
   sessionStorage.setItem("vistaIngresoActual", vista);
 }
 
-
-const vistaGuardada = sessionStorage.getItem("vistaIngresoActual") || "acceso";
-mostrarVista(vistaGuardada);
-
 // Eventos de los botones para cambiar de pantalla
 document.getElementById("ir-a-login").addEventListener("click", () => mostrarVista("login"));
 document.getElementById("ir-a-registro").addEventListener("click", () => mostrarVista("registro"));
 document.getElementById("cambiar-a-registro").addEventListener("click", () => mostrarVista("registro"));
 document.getElementById("cambiar-a-login").addEventListener("click", () => mostrarVista("login"));
+
+
+const vistaGuardada = sessionStorage.getItem("vistaIngresoActual") || "acceso";
+mostrarVista(vistaGuardada);
+
+// Modo oscuro
+const btnOscuroIngreso = document.getElementById("oscuro");
+const iconoModoIngreso = document.querySelector(".imagen-modo");
+
+// Lee si el modo oscuro quedó activado desde main.html u otra vista
+let esModoOscuro = localStorage.getItem("modo-oscuro") === "true";
+
+function aplicarTemaIngreso(oscuro) {
+  if (oscuro) {
+    document.body.classList.add("oscuro-ingreso");
+    iconoModoIngreso.src = "imagenes/modo-oscuro.png";
+  } else {
+    document.body.classList.remove("oscuro-ingreso");
+    iconoModoIngreso.src = "imagenes/modo-dia.png";
+  }
+}
+
+aplicarTemaIngreso(esModoOscuro);
+
+
+btnOscuroIngreso.addEventListener("click", () => {
+  esModoOscuro = !esModoOscuro;
+  localStorage.setItem("modo-oscuro", esModoOscuro);
+  aplicarTemaIngreso(esModoOscuro);
+});
+

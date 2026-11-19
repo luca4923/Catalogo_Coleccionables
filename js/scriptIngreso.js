@@ -1,15 +1,7 @@
-//Usuario administrador
-const usuariosIniciales = JSON.parse(localStorage.getItem("usuarios")) || [];
-const existeAdmin = usuariosIniciales.some((u) => u.email === "admin@coleccionables.com");
-
-if (!existeAdmin) {
-  usuariosIniciales.push({
-    nombre: "Admin",
-    email: "admin@coleccionables.com",
-    password: "Admin123!", // Cumple con tus requisitos de contraseña
-    rol: "admin"
-  });
-  localStorage.setItem("usuarios", JSON.stringify(usuariosIniciales));
+// Verifica si existe al menos un administrador registrado
+function hayAdmin() {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  return usuarios.some((u) => u.rol === "admin");
 }
 
 // Acceso rápido para Admin y Usuario
@@ -106,7 +98,7 @@ formRegistro.addEventListener("submit", (event) => {
     nombre: nombre,
     email: email,
     password: password,
-    rol: "usuario"
+    rol: hayAdmin() ? "usuario" : "admin"
   };
 
   usuarios.push(nuevoUsuario);
@@ -157,6 +149,18 @@ function mostrarVista(vista) {
   vistaAcceso.classList.add("oculto");
   vistaLogin.classList.add("oculto");
   vistaRegistro.classList.add("oculto");
+
+  if (!hayAdmin()) {
+    vistaRegistro.classList.remove("oculto");
+    document.getElementById("titulo-registro").textContent = "Crear Primer Administrador";
+    document.getElementById("subtitulo-registro").textContent = "Creá el primer perfil Administrador para comenzar.";
+    document.getElementById("cambiar-a-login").classList.add("oculto");
+    return;
+  }
+
+  document.getElementById("titulo-registro").textContent = "Crear Cuenta";
+  document.getElementById("subtitulo-registro").textContent = "";
+  document.getElementById("cambiar-a-login").classList.remove("oculto");
 
   if (vista === "login") {
     vistaLogin.classList.remove("oculto");

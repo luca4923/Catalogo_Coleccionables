@@ -204,3 +204,10 @@ body{
   padding: 0 12px;
 }
 
+.subtitulo-registro {
+  font-size: 0.9rem;
+  color: #056C5C;
+  font-weight: 500;
+  margin: 4px 0 10px 0;
+}
+

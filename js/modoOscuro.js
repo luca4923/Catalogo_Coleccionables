@@ -30,6 +30,11 @@ const tarjetasCuenta = document.querySelectorAll(".cajas-con-sombras");
 // Catalogo
     const carrito = document.querySelector(".boton_carrito")
 
+// Admin
+const tarjetaAdmin = document.querySelector(".tarjeta-alta")
+const campForms = document.querySelectorAll(".campo-form")
+const botonCategoria = document.querySelectorAll(".boton-categoria")
+const botonEliminarProducto = document.querySelectorAll(".btn-eliminar-item")
 // Footer
 const footer = document.querySelectorAll(".footer");
 const textosFooter = document.querySelectorAll(".texto_del_footer");
@@ -68,6 +73,12 @@ boton.addEventListener("click", function () {
 
     // Catalogo
     if (carrito){carrito.classList.toggle("boton-carrito-oscuro")}
+    //Admin
+    if(tarjetaAdmin){tarjetaAdmin.classList.toggle("tarjeta-alta-oscuro")}
+    if(campForms){campForms.forEach(campo => {campo.classList.toggle("campo-form-oscuro")})}
+    if(botonCategoria){botonCategoria.forEach(boton => {boton.classList.toggle("boton-categoria-oscuro")})}
+    if(botonEliminarProducto){botonEliminarProducto.forEach(boton => {boton.classList.toggle("btn-eliminar-item-oscuro")})}
+
 
     // Footer
     footer.forEach(function (el) { el.classList.toggle("footer-oscuro"); });
